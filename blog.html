@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>בלוג סטיילינג | פלר גרבויס - סטיילינג אישי, מהפך מלתחה וטיפים לגברים ונשים</title>
+<meta name="description" content="בלוג הסטיילינג של פלר גרבויס - טיפים מעשיים לסטיילינג אישי, מדריכי לבוש לגברים ונשים, ניתוח טרנדים ומהפכי מלתחה. סטייליסטית אישית מחיפה.">
+<meta name="keywords" content="סטיילינג אישי, סטייליסטית אישית, ארגון מלתחה, לבוש לגברים, איך להראות טוב, פלר גרבויס, מהפך, טרנדים">
+<link rel="canonical" href="blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#E63946;
+  --red-dark:#A00C24;
+  --black:#0A0A0A;
+  --gray-light:#F5F4F2;
+  --gray-text:#555;
+  --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;color:var(--black);background:var(--white);direction:rtl}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);padding:0 5%;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{color:#fff;font-size:1.22rem;font-weight:800;letter-spacing:-.5px;text-decoration:none}
+.nav-brand em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-back{background:var(--red);color:#fff;padding:8px 20px;border-radius:4px;font-size:.85rem;font-weight:700;text-decoration:none;transition:background .2s}
+.nav-back:hover{background:var(--red-dark)}
+
+/* HERO */
+.blog-hero{background:var(--black);padding:80px 5% 60px;text-align:center}
+.blog-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+.blog-hero-eyebrow::before,.blog-hero-eyebrow::after{content:'';width:30px;height:1px;background:var(--red)}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:700;margin-bottom:16px;line-height:1.2}
+.blog-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:600px;margin:0 auto;line-height:1.8}
+
+/* LAYOUT */
+.blog-container{max-width:860px;margin:0 auto;padding:60px 5%}
+
+/* POST CARD */
+.post{background:#fff;border:1px solid #e8e8e8;border-radius:8px;margin-bottom:48px;overflow:hidden;transition:box-shadow .3s}
+.post:hover{box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.post-header{padding:36px 40px 24px}
+.post-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.post-date{font-size:.8rem;font-weight:600;color:var(--red);letter-spacing:1px}
+.post-category{font-size:.76rem;background:var(--gray-light);color:var(--gray-text);padding:3px 10px;border-radius:20px;font-weight:600}
+.post h2{font-size:1.5rem;font-weight:800;color:var(--black);line-height:1.4;margin-bottom:12px}
+.post h2 a{text-decoration:none;color:inherit;transition:color .2s}
+.post h2 a:hover{color:var(--red)}
+.post-excerpt{color:var(--gray-text);line-height:1.9;font-size:1rem}
+.post-excerpt strong{color:var(--black);font-weight:700}
+.post-body{padding:0 40px 36px}
+.post-body p{color:var(--gray-text);line-height:1.9;font-size:.97rem;margin-bottom:16px}
+.post-body h3,.post-body h4{color:var(--black);font-weight:700;margin:24px 0 12px;font-size:1.1rem}
+.post-body strong{color:var(--black);font-weight:700}
+.post-body ul,.post-body ol{margin:12px 0 16px 0;padding-right:24px}
+.post-body li{color:var(--gray-text);line-height:1.8;margin-bottom:6px}
+.post-img{width:100%;max-height:340px;object-fit:cover;display:block;margin-bottom:16px}
+.post-img-inline{max-width:100%;height:auto;border-radius:6px;margin:12px 0;display:block}
+.read-more{display:inline-block;margin-top:12px;color:var(--red);font-weight:700;font-size:.9rem;text-decoration:none;border-bottom:2px solid transparent;transition:border-color .2s}
+.read-more:hover{border-color:var(--red)}
+.post-tags{padding:0 40px 28px;display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.75rem;background:#f8f8f8;border:1px solid #e0e0e0;color:var(--gray-text);padding:4px 12px;border-radius:20px}
+
+/* DIVIDER */
+.section-divider{border:none;border-top:1px solid #eee;margin:8px 0 24px}
+
+/* CTA BOX */
+.cta-box{background:var(--black);border-radius:10px;padding:48px 40px;text-align:center;margin-top:60px}
+.cta-box h3{color:#fff;font-size:1.6rem;font-weight:800;margin-bottom:12px}
+.cta-box p{color:rgba(255,255,255,.75);margin-bottom:28px;line-height:1.7}
+.cta-btn{display:inline-block;background:var(--red);color:#fff;padding:14px 36px;border-radius:5px;text-decoration:none;font-weight:700;font-size:1rem;transition:background .2s}
+.cta-btn:hover{background:var(--red-dark)}
+
+/* FOOTER */
+footer{background:#111;color:rgba(255,255,255,.5);text-align:center;padding:32px 5%;font-size:.85rem}
+footer a{color:var(--red);text-decoration:none}
+
+@media(max-width:600px){
+  .post-header,.post-body,.post-tags{padding-right:20px;padding-left:20px}
+  .blog-hero{padding:60px 5% 40px}
+  .post h2{font-size:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="peler-grabois-v3.html" class="nav-brand">פלר <em>גרבויס</em></a>
+    <nav aria-label="ניווט">
+      <ul class="nav-links">
+        <li><a href="peler-grabois-v3.html#services">שירותים</a></li>
+        <li><a href="peler-grabois-v3.html#contact">צור קשר</a></li>
+      </ul>
+    </nav>
+    <a href="peler-grabois-v3.html" class="nav-back">← חזרה לאתר</a>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="blog-hero-eyebrow">בלוג סטיילינג</div>
+  <h1>טיפים, מדריכים ותובנות<br>מעולם הסטיילינג האישי</h1>
+  <p>כל מה שרציתם לדעת על לבוש, מלתחה, תדמית ואיך להרגיש טוב יותר בתוך הבגדים שלכם</p>
+</section>
+
+<div class="blog-container">
+
+  <!-- POST 1 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4azTicsS6XHqYv4692lHxvM6aLIRuDy8q21k6ftROs0oXnEDAWRi1AWGw03w5prUVtICKLSuKXqlegfzPa6WaXdDkk8qoBbLaopJwxmaX-f1Q0ecgPZMHAYUs708ggdjAfmaQ4pyScwA/s1600/fleur.jpg" alt="פלר גרבויס" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מאי 2014</span>
+        <span class="post-category">על פלר גרבויס</span>
+      </div>
+      <h2>פלר גרבויס — סטייליסטית אישית</h2>
+      <p class="post-excerpt">
+        פלר גרבויס היא סטייליסטית אישית המתמחה בסטיילינג ומיתוג אישי לנשים וגברים. לאחר שנים של עבודה בתחום האופנה, פלר פיתחה שיטה ייחודית לפיצוח המלתחה האישית — תהליך שמשלב הבנת מבנה הגוף, ניתוח אישיות, זיהוי הצרכים הספציפיים של כל לקוח ובניית ארון שעובד.
+        <br><br>
+        פלר מלווה לקוחות בתהליכי ארגון מלתחה, שופינג אישי, מהפכי סטיילינג ומציאת הסגנון האמיתי שלהם — כזה שמחמיא, מרגיש נכון ומשדר את מי שהם באמת.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">סטיילינג אישי</span>
+      <span class="tag">פלר גרבויס</span>
+      <span class="tag">סטייליסטית אישית</span>
+      <span class="tag">חיפה</span>
+    </div>
+  </article>
+
+  <!-- POST 2 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHsNkabgBXWa8gsQkQL-Uut0OXYIUWdGoPkEaufhdtO_FxdyOab01HYWuuwVvoXqOxpIs8ZgtOErkPCu40Cy21LQJw5CG1rx_Wn9FpEUy_qnXCnGTnK6fFY609Fuo9r8_JJqStrDFpL0k/s1600/629ce9755ec5aa670f62b05527d63ef2.jpg" alt="ג'קט מחויט" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מרץ 2014</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>למה ג'קט מחויט הוא ההשקעה הטובה ביותר שגבר יכול לעשות</h2>
+      <p class="post-excerpt">
+        <strong>ג'קט מחויט. בלייזר. סאקו.</strong> כל שמות הקוד שמעוררים בגבר הישראלי הממוצע תגובה אחת — "זה לא בשבילי". ובכן — טעות. ועוד איך. הגזרה המרובעת של הבלייזר היא פשוט ההמצאה הגדולה ביותר לטובת הגבר מאז ומתמיד.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        הג'קט המחויט בונה לכם פלג גוף עליון, מוצק ומחוטב. הוא יוצר כתפיים, מגדיר מותן ומעניק נוכחות שאי אפשר להשיג עם טי שירט ומכנס ג'ינס — לא משנה כמה הם יוקרתיים.
+      </p>
+      <p>
+        <strong>גברים שלובשים ג'קט:</strong> נראים גבוהים יותר. נראים רזים יותר. נראים מצליחנים יותר. ויותר מכל — הם מרגישים אחרת. הלבוש המחויט פועל מבפנים החוצה. כשאתה מתלבש כמו מישהו שמכבד את עצמו — גם הסביבה מכבדת אותך בהתאם.
+      </p>
+      <p>
+        <strong>כמה טיפים לבחירת בלייזר נכון:</strong> בדקו שהכתף יושבת בדיוק על הכתף שלכם — לא מאחור ולא לפנים. השרוול אמור להראות חצי ס"מ של שרוול חולצה מתחתיו. הגוף לא אמור להיות גדול מידי — זו הטעות הנפוצה ביותר. בלייזר שיושב כמו שצריך מייצר קסם. בלייזר גדול מידי — עושה הפוך.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">ג'קט מחויט</span>
+      <span class="tag">איך להראות טוב</span>
+      <span class="tag">בלייזר</span>
+    </div>
+  </article>
+
+  <!-- POST 3 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwdzjZsZJSmlCGl8OThvPu1yoC6Dc1H4lyt0cenpD4rWxjv9VyCo9O0kUKrjukRv4psUFiHk2GXb6ZDm8I21wwrcBcJ4oMZwVuKLPojXI-EHzM2-8CN3xGJruPya21XGM2GkOAdnNRFOs/s1600/7a2ae8d22cd72a46dac67d96765ebdf5.jpg" alt="אודי" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">ספטמבר 2013</span>
+        <span class="post-category">המלצת לקוח</span>
+      </div>
+      <h2>אם אתה גבר וורקוהוליק — זה בשבילך | חוות דעת של אודי</h2>
+      <p class="post-excerpt">
+        אודי, בעל עסק בניית ממשקי תוכנה מתל אביב–יפו, שיתף את חוויית הסטיילינג שלו עם פלר. הסימפטום: ערימות בגדים שהופכים שוב ושוב, ניסיון להתאים חולצה למכנס לפגישת עבודה — ובלי הצלחה.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        "הגעתי ממחשבה מוטעית שרק דגמח"ים מעוצבים מתאימים לי, וקניות אונליין ששם הסתבכתי עם המידות והחומרים שהתבררו ירודים.
+      </p>
+      <p>
+        פלר הציעה <strong>פגישת היכרות</strong>. כבר בפגישה ראיתי את המקצועיות, האופן שבה היא סורקת אותך ושואלת את השאלות הנכונות. אפשר לומר שזה תחילתה של ידידות מופלאה שנוגעת בדימוי גוף, בהעשרת טרנדים, צבעים ועולם האופנה.
+      </p>
+      <p>
+        <strong>שלב שני</strong> — ביקור במלתחה. מה שניתן להציל, וכדאי שתיפטר מהרוב, גם אם זה קשר רגשי לחולצת 'גולדן בוי'. פריטי לבוש שכבר לא נראים כבגדים כלל, לא רלוונטיים — עדיף שישמשו מוצג מוזיאוני.
+      </p>
+      <p>
+        <strong>שלב שלישי</strong> — חווית הקנייה הכיפית. אתה מרגיש כוכב שמופצץ בבגדים שעפים עליך במלתחה. היא מתרוצצת ומתאימה לך דברים, מדידה ולא נחה, ומפעילה קשרים. אתה מרגיש V.I.P.
+      </p>
+      <p>
+        התוצאה: אתה יותר מחויט, מעודכן, מרגיש נפלא. <strong>מומלץ לגברים וורקהוליים — לשדרג ת'לוק.</strong>"
+      </p>
+      <p>— אודי, תל אביב</p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">המלצה</span>
+      <span class="tag">מהפך</span>
+      <span class="tag">חוות דעת</span>
+    </div>
+  </article>
+
+  <!-- POST 4 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1lYBuDoaiRXrXa1UGI5Du-PzgRm7zhTSG5ICLW0LLwSoQA6d-zY9N5lmERSbH_iPlZEVlIbLTjweZ_j4onYGJCJCR4sqofQm5-k6PKoNINzeR-5Tk-5o-jrktjz3fDOH3o3zl3t_Ofw4/s400/3ab220_man_using_credit_card_to_shop_online_300.jpeg" alt="קניות ברשת" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">ספטמבר 2013</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>שוקל לקנות בגדים ברשת? תחשוב פעמיים — למביני עניין בלבד</h2>
+      <p class="post-excerpt">
+        לפני כמה ימים שלח לי חבר לינק לכתבה בדה מרקר "במקום להיסחב בקניון — גברים קונים בגדים ברשת", המתייחסת לסבלם המתמשך והאלטרנטיבה המנצחת לטענתם. אני סטייליסטית וברור שיש לי אג'נדה לכתוב פוסט תגובה — אבל דווקא בגלל זה חשוב לי לפרוס בפניכם את התמונה הגדולה.
+      </p>
+    </div>
+    <div class="post-body">
+      <h3>1. רק 25% מהגברים יצליחו למצוא פריטים הולמים ברשת</h3>
+      <p>
+        לכל גבר מבנה גוף טיפוסי שחנן אותו הטבע. הגבר הממוצע, זה ששונא לעשות קניות ולא מבין בזה דבר, הוא גם זה שלא מבין דבר וחצי דבר במבנה הגוף שלו. הסיכוי שתדעו שחולצה מידה L של מותג כזה או אחר תתאים למבנה גופכם הספציפי שואף לאפס.
+      </p>
+      <h3>2. כל חברה ברשת עובדת עם סקלת מידות שונה</h3>
+      <p>
+        זו אחת הבעיות הידועות בקניית בגדים ברשת. יש עשרות חברות המשקיעות מיליונים בפיתוחים טכנולוגיים המנסים לתחלף מדידה — עדיין לא כאן.
+      </p>
+      <h3>3. זהירות מקניית מכנסיים ברשת</h3>
+      <p>
+        מכנסיים זה אולי הפריט המסובך ביותר לקניות. זה מחייב מדידה, במיוחד אם אתם מעל גיל 30. אם זה המצב — עדיף לקפוץ לחנות הקרובה, למדוד ורק אז לקנות.
+      </p>
+      <h3>מתי כן מומלץ לקנות ברשת?</h3>
+      <p>
+        <strong>מעילים. גרביים. תחתונים. בגדי ספורט. אקססוריז.</strong> אם יצא לכם לקנות בעבר מותג ספציפי בחו"ל ואתם מכירים את טווח המידות שלו על בשרכם — זו הזדמנות טובה לקנייה חוזרת.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">קניות אונליין</span>
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">טיפים לקנייה</span>
+    </div>
+  </article>
+
+  <!-- POST 5 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzEA3Xn5ApjK5jf8H81FfNGVfz5EBFJub7fcjsW1I3zvoRbmh-EOmaz7ea5SMu9HkympZ-EtYeqSomGUH-GZeJ55xjJqFIgVdjyMUJ_OzyIRN122lufSvatAZD1sWDajNkBL2ZL45bLhE/s1600/%D7%90%D7%99%D7%A0%D7%A4%D7%95%D7%92%D7%A8%D7%A4%D7%99%D7%A7%D7%94+%D7%92%D7%91%D7%A8%D7%99%D7%9D+-+%D7%9E%D7%94+%D7%96%D7%94+%D7%A4%D7%99%D7%98+%D7%A0%D7%9B%D7%95%D7%9F+%D7%95%D7%9C%D7%90+%D7%A0%D7%9B%D7%95%D7%9F+%D7%91%D7%97%D7%9C%D7%99%D7%A4%D7%94.jpeg" alt="חולצה משובצת" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">אוגוסט 2013</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>כל מה שרצית לדעת ולא העזת לשאול על החולצה המשובצת — MEN STYLE</h2>
+      <p class="post-excerpt">
+        <strong>לכל גבר לפחות 3–4 חולצות משובצות בארון.</strong> הרשתות מנפיקות אותן כאילו מדובר בפריט חובה בארונו של כל גבר — אבל הגיע הזמן שנקרא לילד בשמו. ההדפס המשובץ מגיע בשלל ווריאציות שחלקן הגדול לא מחמיא. איך לבחור משובצת מבלי שתשמין אותך?
+      </p>
+    </div>
+    <div class="post-body">
+      <h3>Good Men Style Is First of all Good Fit</h3>
+      <p>
+        הופעה מוצלחת מבוססת תמיד על "פיט" טוב — מידת ההתאמה בין קווי הבגד לגזרת הגוף. לכל גבר יש מבנה גוף שונה: עיגול, אליפסה, מרובע או משולש. בדקו שאין מרווחים מיותרים באזור הכתפיים, השרוולים, המותן ובית השחי.
+      </p>
+      <h3>להימנע משרוול קצר במכופתרת משובצת</h3>
+      <p>
+        מכופתרות שרוול קצר לעולם ייראו פחות טוב ממכופתרות שרוול ארוך. מה עושים עם החום? תקפלו שרוול עד למרפק.
+      </p>
+      <h3>למראה מחוטב — בחרו הדפס צפוף וקטן</h3>
+      <p>
+        ההדפס המשובץ ידוע כאחד המשמינים. הסוד הוא בגודל ההדפס. <strong>הדפס גדול — משמין. הדפס צפוף קטן — לא משמין</strong> וגם נראה הרבה יותר קלאסי, מתוחכם ויוקרתי.
+      </p>
+      <h3>גודל ההדפס מכתיב את הסגנון שלך</h3>
+      <p>
+        יוצאים לדייט או מסעדה? בחרו הדפס צפוף קטן, כיסים קטנים, צווארון קטן. חולצה מבד עבה עם משבצות גדולות מרווחות — מתאימה לסגנון יומיומי, לא מחייב.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">חולצה משובצת</span>
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">טיפים לבחירת בגדים</span>
+    </div>
+  </article>
+
+  <!-- POST 6 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgh8UXOTO8BJuSGhm2AJI-5XtwkK4VXj9DWeb_Gzs2oSoqUtetUhxYLQlLhSJFqWaJ7ALSximB3DbREtmBdqZmIOcdZp4HOip5UvLwqWMouChBAUWdQDyY1qlqCfuq6Z3_OGE6LYFUYpbk/s640/172749255.jpg" alt="מה אתה לובש" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">יולי 2013</span>
+        <span class="post-category">אופנת רחוב ועיון</span>
+      </div>
+      <h2>מה אתה לובש כשאתה קם בבוקר — אופנת רחוב וסגנון אישי</h2>
+      <p class="post-excerpt">
+        אחד הדברים המעוררים בעיני הוא שיטוט אקראי בסמטאות העיר. בהייה בחנויות, בעוברים ושבים, בחלונות ראווה. בכל מה שמתרחש שם בחוץ... זה כמו ריצה בשבילי. עבודה מנטלית. הגוף שואט, עובד, הראש בקומה. אדם קם בבוקר, מרגיש עם עצמו בצורה מסוימת, עוטה על עצמו בגד ויוצא לרחוב — ואנו המתבוננים יכולים לנסות להבין מה עבר לו בראש אותו בוקר.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        אנשים יש שמיעתיים — כאלה שמדברים ב"שמעתי שהוא לא מצליח בעבודה שלו". אנשים אחרים הם ויזואליים — כאלה שמדברים ב"נראה לי ש... אני רואה שאתה לא מבין על מה אני מדברת". אני כזאת. ויזואלית.
+      </p>
+      <p>
+        <strong>כמה דוגמאות מאופנת הרחוב שנלכדו בעינינו:</strong> הדוכסית פאולה בשמלת ולנטינו — רכות ואולי מלנכוליה, לולי הסטילטו הוורודות. עורכת האופנה עם טורבן על ראשה, חצאית תפוחה עם ג'קט ג'ינס — ים של יצירתיות. השחקנית-דוגמנית קיקו מיזוווארה בשבוע הקוטור בפריז — מראה קז'ואל מדויק. כשאומרים "לא מתאמץ"? זו הכוונה.
+      </p>
+      <p>
+        <strong>טיפ אחד שאסור לפספס:</strong> אם יש לכם בארון שמלה כעורה וחשבתם לזרוק אותה — עצרו. לבשו מתחת חולצת כפתורים, הוסיפו אקססוריז נכונים, והנה אאוטפיט למופת.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">אופנת רחוב</span>
+      <span class="tag">סגנון אישי</span>
+      <span class="tag">סטיילינג לנשים</span>
+    </div>
+  </article>
+
+  <!-- POST 7 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifwcpAzQBBbu6BT9_jyBdLW9FFvN9zkiiGRmR5q0wauwlbtKbgf4kROY9yzZhYnDDhDDHegeUZ7aRfFDd8Mz7kwzir9dUjf7rhAOzA7SlYeaz3RnT_3WInQz4Hrct3_hmUiPsVXTVX9lA/s1050/97ab2387cad1457ec5f0c6728251074a.jpg" alt="דימוי גוף" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מאי 2013</span>
+        <span class="post-category">דימוי גוף ותדמית</span>
+      </div>
+      <h2>החזה שלי קטן מידי. יש לי טוסיק גדול. עור פנים מקומט. אני נמוך — על דימוי גוף ומה שאנחנו באמת רואים במראה</h2>
+      <p class="post-excerpt">
+        חברה שלי העבירה אלי את הסרטון של Dove. והדבר הראשון שכתבתי בתגובה היה: ח ז ק! ללא ספק אחד החזקים שראיתי לאחרונה. הסרטון מציג ניסוי חברתי: איור שנעשה כשאשה מתארת את עצמה לעומת איור של מישהו זר המתאר אותה. התוצאות? מדהימות.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        מחצית מהאנשים שמגיעים אלי לסטיילינג הם גברים. אני מודדת עליהם בגדים, מנסה גזרה כזו ואחרת, מראה להם אופציות ללוק חדש — מדובר בתהליך אינטימי למדיי. אתה מתלבש ומתפשט ליד מישהו אחר, ולומד להסתכל אחרת לגמרי על הגוף שלך.
+      </p>
+      <p>
+        <strong>תסמכו עלי שאני אומרת לכם:</strong> יש מעט מאוד אנשים שה"אני במראה" שלהם זהה לחלוטין ל"אני" הפיזי האמיתי. התפיסה העצמית שלנו היא בגדר תופעה שבירה ומורכבת.
+      </p>
+      <p>
+        סיפור על לקוחה שלי: האשה לא נופלת במראה מדוגמנית סטנדרטית. יפהפייה אמיתית. שיער אדמוני מטמטם. אבל אמא שלה והמשפחה תמיד אמרו לה שהרגליים שלה לבנות מידי. כן, לא צוחקת. עד גיל 40 היא לא חשפה רגליים. כמובן שעצרתי את התופעה הזו.
+      </p>
+      <p>
+        <strong>המסר המרכזי:</strong>
+      </p>
+      <p>
+        אנחנו יותר "יפים" ממה שאנחנו חושבים.<br>
+        אנחנו יותר "יפים" ממה שאנחנו אומרים.<br>
+        אנחנו "יפים" בדיוק כמו שאנחנו — וחלק גדול מהזמן אנחנו לא יודעים לראות את זה.
+      </p>
+      <p>
+        אין מבנה גוף אופטימלי. כמו שאין צורת פנים אופטימלית. מיתוס היופי מצליח להחליש את כולנו.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">דימוי גוף</span>
+      <span class="tag">דימוי עצמי</span>
+      <span class="tag">סטיילינג לנשים</span>
+      <span class="tag">תדמית</span>
+    </div>
+  </article>
+
+  <!-- POST 8 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjukN49GQotUeTPbZmngbnIgfyyhONpmGrqOmnUX3WORhE_ycwhvAc8Zv9Lr9vCEAj5Grsps3NY791hhRrngpyJBBNFPtZpOu0pzrbaxgmYNt3_FV44w_RBQdFPqS47r2WWQZsh6-ddmeg/s1600/b47771d4ca97f3c7ed0df3e2567a85a0.jpg" alt="חולצה בחוץ" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מרץ 2013</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>החולצה בתוך המכנסיים או בחוץ? — המדריך הסופי לגברים</h2>
+      <p class="post-excerpt">
+        בניגוד לאירופה ולארה"ב — קוד הלבוש העסקי המקובל כאן משוחרר בהרבה. אבל גם כשמדובר בסגנון קליל — יש כמה חוקי בסיס שראוי לתת עליהם את הדעת. יש קו עדין שמפריד בין קליל "מהודק" לקליל מרושל — כזה שבלי לשים לב מייצר תדמית רעועה שאינה מכבדת.
+      </p>
+    </div>
+    <div class="post-body">
+      <h3>1. חולצה מחוץ למכנסיים לא מטשטשת בטן — היא מדגישה אותה</h3>
+      <p>
+        מיתוס גברי מוביל הוא שחולצה מחוץ למכנסיים גורמת לכם להראות טוב יותר. טעות ענקית. חולצה בחוץ מחלקת את הגוף בצורה שאינה מאוזנת — מאריכה פלג גוף עליון ומקצרת רגליים. גברים שאינם גבוהים ייראו נמוכים יותר. בעלי בטן — הבטן תודגש.
+      </p>
+      <h3>2. איך לזהות חולצה שנועדה לשבת בחוץ?</h3>
+      <p>
+        <strong>חולצות שנועדו ללבישה פנימית</strong> הן ארוכות יותר ועוצבו עם סיומת ישרה. אם הן מגיעות מתחת לכיסי המכנס — הן נועדו לשבת בפנים. <strong>חולצות שנועדו ללבישה חיצונית</strong> גזורות בצורה מעוגלת בתחתית — ומגיעות עד מפתח כיסי המכנס.
+      </p>
+      <h3>3. הפתרון: מראה השכבות</h3>
+      <p>
+        רוצים על סגנון משוחרר ונח? לכו על מראה השכבות — קרדיגן פתוח מעל מכופתרת, מכופתרת פתוחה מעל טי שירט. מראה שמשדר קלילות ובאורך נכון.
+      </p>
+      <p>
+        <strong>בקיצור:</strong> חולצה בפנים — תמיד עדיפה. חולצה בחוץ — רק אם היא גזורה לכך, ובאורך שמגיע עד מפתח הכיסים.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">חולצה בחוץ</span>
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">מה ללבוש</span>
+      <span class="tag">טיפי לבוש</span>
+    </div>
+  </article>
+
+  <!-- POST 9 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiokOLyG7OV7UoKxe-LSobXx70QC_xwues-FrkBxawRC2QKEY_oKuTZqF2gYncR581Hc30ilTnzNoTrRjhhc0WJSmLx4KWD16hi22mG8mXMjyRoAQtNpOXS5kUgcreEgaOOAjPkiwfi7X4/s1600/436286282621459344_LQhDVtDy_c.jpg" alt="השילוש הקדוש" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מרץ 2013</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>חוק השילוש הקדוש — שלושת כרטיסי הביקור הויזואליים שלכם</h2>
+      <p class="post-excerpt">
+        שלושה כרטיסי ביקור ויזואליים מקבעים בעינינו תדמית של אדם. לפיהם נחליט אם הוא מטופח או מוזנח. אני קוראת לו <strong>חוק השילוש הקדוש</strong>: שיער, כפות ידיים, נעליים.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        <strong>שיער</strong> — פרמטר ראשון במעלה. מראה השיער מעיד על בריאות. שיער שופע וקורן, נקי ומסודר וללא קשקשים — מעודד תגובה חיובית. שיער שמנוני או יבש מידי, עם קשקשים — מעביר תחושת זלזול.
+      </p>
+      <p>
+        <strong>כפות ידיים</strong> — כרטיס הביקור האישי והמקצועי שלנו. ציפורניים מסודרות, ידיים נקיות. הנ"ל מופנה לשני המינים.
+      </p>
+      <p>
+        <strong>נעליים מצוחצחות</strong> — נעליים סוגרות את ההופעה שלכם. גם אם תלבשו חליפה ממורקת אבל הנעליים משופשפות, דהויות, ישנות — בדקותיים הרסתם את כל ההופעה המדהימה שבניתם.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">השילוש הקדוש</span>
+      <span class="tag">תדמית</span>
+      <span class="tag">נעליים</span>
+      <span class="tag">סטיילינג גברים ונשים</span>
+    </div>
+  </article>
+
+  <!-- POST 10 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6rxnRBVgFzqES1wVqbtwI4W8Uu98ebArgSyvDAtrZ5brBkFZQ1bwPQbsNaTlzLfBmM-hrn8REUExua3NO59rX2CXon0buRCCjCpQTPe4-HVGEYFN9OCwIu4ug5nxy7V9R61LURlNVYxM/s640/172749191.jpg" alt="לבוש לדייט" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">פברואר 2013</span>
+        <span class="post-category">סטיילינג לדייטים</span>
+      </div>
+      <h2>לבוש ותקשורת בדייט הבא שלכם — המדריך המלא</h2>
+      <p class="post-excerpt">
+        רושם ראשוני הוא תהליך בלתי רציונלי, אינסטינקטיבי ומתרחש תוך כמה אלפיות שניה. לרושם ראשוני אין הזדמנות שניה — ויותר מזה, אם ייצרתם רושם ראשוני שלילי יידרשו לכם כ-11 אינטראקציות חיוביות עם אותו אדם על מנת לתקן אותו.
+      </p>
+    </div>
+    <div class="post-body">
+      <h3>חוק השילוש הקדוש בדייט</h3>
+      <p>שיער נקי ומסודר. כפות ידיים מטופחות. נעליים מצוחצחות ומתאימות ללוק הכולל.</p>
+      <h3>סגנון: התלבשו באופן שיעודד הקשבה ולא בהייה</h3>
+      <p>
+        <strong>חלק עליון מינורי</strong> — אל תלבשו אאוטפיט שגונב את ההצגה מהתוכן האמיתי — אתם! הדפסים צעקניים, צבעוניות חזקה וטקסטורות רעשניות מעייפים את העין ועשויים לייצר סחרחורת. עומס ויזואלי שודד את הפוקוס מכם.
+      </p>
+      <h3>צבעוניות מנצחת לדייטים</h3>
+      <p>
+        צבעים קודרים וכהים מתאימים יותר לעולם העבודה. בדייט — <strong>העדיפו צבעים חמים, קלילים, בהירים</strong>: ורוד, לבן, ירקרק, כחול תכלת, סגלגל, off-white.
+      </p>
+      <h3>גברים — ג'נטלמן לוק</h3>
+      <p>
+        המראה המחויט (בלייזרים, ג'קטים, חולצות מכופתרות) לגברים זה ברמה של עבודת קודש. הגזרה המרובעת מייצרת נראות מרשימה, מחוטבת ובנויה. <strong>בלי נעלי ספורט בדייט.</strong>
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">לבוש לדייט</span>
+      <span class="tag">סטיילינג לנשים</span>
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">רושם ראשוני</span>
+    </div>
+  </article>
+
+  <!-- POST 11 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSyjvMZQqmKiQCaH4IsrUiBHPY5EwIgPxYq1mPa5AlYsh9Ps387qQ8MK2Os-LwpHf4vlYWOuiYZRc5vdeaatufsuYr-DANTQTQZwjnDG2fpGC4xx09b4jVdIqjBju84PTwySFo3AARTNc/s1600/129312246.jpg" alt="מדריך למתלבש המתחיל" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">ינואר 2013</span>
+        <span class="post-category">סטיילינג לגברים</span>
+      </div>
+      <h2>מדריך למתלבש המתחיל — לגברים בלבד</h2>
+      <p class="post-excerpt">
+        שני גברים בתא הלבשה. שיחה שמיעתית אמיתית בחנות. האחד מחפש מכנסיים, השני מתרוצץ נטול חשק. "תגיד, מה אתה אומר? זה נראה לך עובר?" — "אתה כבר לא בחדר כושר, אה?" — ואז אני נכנסת לתמונה. גברים בתא הלבשה זו חגיגה לעיניים ולעתים גם קומדיה.
+      </p>
+    </div>
+    <div class="post-body">
+      <h3>קנייה מרוכזת אחת לרבעון — זה המינימום</h3>
+      <p>הבגדים שלך הם כרטיס הביקור שלך. בעבודה, עם חברים, ובטח ובטח מול האשה שלך.</p>
+      <h3>הגודל כן קובע — מכפלת המכנס</h3>
+      <p>
+        מכפלת המכנס נועדה לגלוש גג 5 ס"מ מעל הנעל. לא מעבר. כשהמכנס ארוך מידי, אתם ממשיכים לצעוד ובו והוא פוגש את המדרכה — וזה הורס את הבד תוך חודשיים.
+      </p>
+      <h3>שרוולים — מידה נכונה</h3>
+      <p>
+        בחולצה מכופתרת השרוול אינו אמור לעבור את שורש כף היד. סוודרים/ג'קטים — השרוול אמור לרדת עד 2–3 ס"מ משורש כף היד. שרוול ארוך מידי? קיצור אצל חייט עולה 15 ש"ח ויוצר מראה שונה לחלוטין.
+      </p>
+      <h3>דוד מלך ישראל — הג'ינס</h3>
+      <p>
+        מגיל מסוים, ג'ינס בגזרה רחבה, קרעים ושפשופים פשוט לא נראה טוב. <strong>גרסה נקייה וכהה</strong> היא הבחירה הנכונה.
+      </p>
+      <h3>שתיקת המחויטים</h3>
+      <p>
+        לוק מחויט — ג'קטים, חולצות מכופתרות, בלייזרים — זו המצאת המאה. הגזרה המרובעת נולדה להדגיש טורסו גברי ובונה לכם פלג גוף עליון מוצק ומחוטב. כולכם ללא יוצא מן הכלל נראים מחוטבים ומרשימים יותר בלבוש מחויט.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">מדריך למתלבש</span>
+      <span class="tag">סטיילינג לגברים</span>
+      <span class="tag">מכנסיים</span>
+      <span class="tag">ג'ינס</span>
+      <span class="tag">בלייזר</span>
+    </div>
+  </article>
+
+  <!-- POST 12 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvHWkdJgF7iRINoacSYqMHj5wIsll2BOXV0XZYvT5PNX_8bYPTelxn8AfpD2umeFKxSoBjQSNPnnpsQVd61tthLBAt16CYfBX3-CdAG_xfk3vL_HCCqQJ7vFQyYtVENvtOWaTfupublHI/s1600/00070fullscreen.jpg" alt="טרנדים 2012" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">ינואר 2013</span>
+        <span class="post-category">טרנדים ואופנה</span>
+      </div>
+      <h2>סיכום טרנדים 2012 — חורף, סילבסטר ומה שחם עכשיו</h2>
+      <p class="post-excerpt">
+        שבוע שעבר קידמנו כניסתה של שנה חדשה. מקדישה לכם תמצות טרנדים לשנת 2012 — מה שעבר, מה שנשאר ומה שחשוב לדעת.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        <strong>Burberry Prorsum Fall 2012:</strong> מעיל הטרנץ' המוכר עובר גלגול יפהפה — כפריט אלגנטי, מלכותי, ייצוגי. הפפיון חוזר, אבל הפעם בצורה חיננית — נלבש מעל המעיל, מעל הבלייזר, בתוך קונטקסט פונקציונלי.
+      </p>
+      <p>
+        <strong>עולם של צבע:</strong> שילובי צבע מנוגדים — קרים, קודרים עם נגיעות אדמה חמות. DEEP BLUE, אפורים, ירוקים עם נגיעות חום עמוק, חרדל וצהוב. קטיפה — חליפות קטיפה גבריות יפהפיות.
+      </p>
+      <p>
+        <strong>גזרת הפפלום:</strong> החיננית שחובקת מותן ומתרחבת החוצה — פיתרון מצוין לבנות גזרת הפטיט הרוצות מבנה מוגדר יותר.
+      </p>
+      <p>
+        <strong>לוק השכבות:</strong> חליפה אלגנטית ומעליה עטוי מעיל קז'ואל. חיבור מפתיע שעובד נפלא.
+      </p>
+      <p>
+        <strong>חיות:</strong> הדפסי חיות שנראים בכל פיסת קניינות אורבאנית. מראה "הילדה הטובה" מתעורר לחיים.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">טרנדים</span>
+      <span class="tag">אופנה</span>
+      <span class="tag">Burberry</span>
+      <span class="tag">פפלום</span>
+      <span class="tag">קטיפה</span>
+    </div>
+  </article>
+
+  <!-- POST 13 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1MLc2D8ZmEcbMNgWC7TOBLQNk3nRKVvh2296zgZ5kiV9NXnxaAYxjODT6w6qd6Bb29jLay15MbQ_PMebuBSegu6gjx7iMv-bKwH24dkWqro8KGQqFyZoZAmMvubuUJ1HI9BqNicebo/s1600/10c1dacea13625cdb82ff9d75574105d.jpg" alt="דיוויד ששון" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">דצמבר 2012</span>
+        <span class="post-category">שבוע האופנה ת"א</span>
+      </div>
+      <h2>הגברים של דיוויד ששון: כשלגון צבעוני שרציתי לנגוס בו</h2>
+      <p class="post-excerpt">
+        קיפצצתי מהמיטה, מקלחת חמה, כוס קפה, ויאללה לשבוע האופנה ת"א 2012. מתחם גינדי (שוק הסיטונאים הישן) מעולם לא נראה טוב יותר. ערב רב של מעצבים, קולגות ושלל אושיות אופנה ובידור מילאו את החלל.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        הגברים של דיוויד ששון נראו בעיניי כשלגונים קיציים של צבע. ארטיקים שהעלו בי חשק עז לתת בהם ביס.
+      </p>
+      <p>
+        לו רק ידע הגבר הישראלי הטיפוסי — זה שאינו חפץ "להתלבש". זה שרוצה להצליח עם המין השני אבל אין לו כוח. לו רק ידע — <strong>כמה כוח חסר המודעות. כמה בזבוז. כמה הזדמנויות להמם אותנו.</strong>
+      </p>
+      <p>
+        מה שכן — היתה שם קולקציה צבעונית, מעוררת, מבודלת ויותר מהכל — לבישה. שני דגמים מוצלחים במיוחד של חולצות טוניקה סגלגלה וירוקה. נעלי אוקספורד מצוינות. לוק מחויט, חליפות, פפיונים, צווארונים בצבע.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">שבוע האופנה</span>
+      <span class="tag">דיוויד ששון</span>
+      <span class="tag">סטיילינג לגברים</span>
+    </div>
+  </article>
+
+  <!-- POST 14 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpjZKahyphenhyphenZuU0fkJVCTDr8GK_GkopV7hMwkbSSFZbjG4L5ctfQ0bRh92_PBVPg0fmasLwVt8rJVkc_lG4vgRK8h6YU8sgoBXngxFkl_GcAHGNQo6Zh0ginYrRf10T3k9JMcvZD-H5YUUiE/s1600/_VIE0084.450x675.JPG" alt="שומע צבעים" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">נובמבר 2012</span>
+        <span class="post-category">השראה ותרבות</span>
+      </div>
+      <h2>שומע צבעים — על ניל הארביסון, צבעים, אופנה ותפיסה חושית</h2>
+      <p class="post-excerpt">
+        שבוע שעבר ניסיתי למצוא איזו פילוסופיה שתעזור לי להסביר לעצמי למה עולם הצבע כל כך חשוב לי. נתקלתי בהרצאה מטורפת ב-TED של בחור צעיר ויצירתי ביותר בשם ניל הארביסון — ואפשר שהוא אחד הסייבורגים הראשונים שתכירו.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        ניל נולד עם תסמונת ראייתית נדירה — עיוורון צבעים מוחלט. עבורו קיימת סקלה אחת ויחידה בעולם — אפור. הוא החליט לשנות את המצב: ועם מדען מחשבים ומועצה מברצלונה, פיתח חיישן צבעים שיושב על ראשו ומזהה כל צבע. החיישן ממיר את תדר הצבע לצליל המושתל בעורפו.
+      </p>
+      <p>
+        אחרי שמונה שנים — ניל לימד את עצמו לחוש 360 צבעים. כשניל הולך לגלריה — הוא <strong>שומע</strong> פיקאסו. האופן בו הוא מתלבש השתנה לחלוטין: אם פעם הוא התלבש כך שייראה יפה — היום הוא מתלבש כך שיישמע לו יפה.
+      </p>
+      <p>
+        הרעיון הזה מרתק אותי כסטייליסטית. בסופו של דבר — <strong>סטיילינג מהו? שפה ותקשורת, דרך בגדים.</strong>
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">צבע</span>
+      <span class="tag">TED</span>
+      <span class="tag">סטיילינג</span>
+      <span class="tag">השראה</span>
+    </div>
+  </article>
+
+  <!-- POST 15 -->
+  <article class="post">
+    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjA4OywVc9OpB7z4sfxhTLYio5ZmZ47RVDBSSBp9kJD70EZhSj8-T1fZdTVPjxdBuyojZ4Rf1byUN292ZAu1vqU499A6fyvB-_Q8fHM3XBOrbvAUnB5Faur-N_zNvfxdALp-FxadStCX3Y/s1600/_VIE0089.450x675.JPG" alt="Mary Katrantzou" loading="lazy">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">אוקטובר 2012</span>
+        <span class="post-category">אופנת מעצבים</span>
+      </div>
+      <h2>ברוכים הבאים לבלוג — Mary Katrantzou ועולם של הדפסים</h2>
+      <p class="post-excerpt">
+        שמונה חודשים תמימים עברו עליי בניסיון להתקבל ללימודי תואר שני לאחד מבתי הספר המובילים לאופנה בעולם. שמונה חודשים של עבודה קשה, תהליך מייגע, ראיון אחד בלונדון, התפטרות מעבודה... לבסוף לונדון לא מחכה לי. אבל הבלוג הזה — כן מתחיל.
+      </p>
+    </div>
+    <div class="post-body">
+      <p>
+        אני מתחילה ממעצבת חדשה יחסית — Mary Katrantzou, יווניה שחיה ועובדת בלונדון (איך לא?). עיצוביה מבוססים על הדפסים מרהיבים, כל פריט הוא כמו ציור בפני עצמו.
+      </p>
+      <p>
+        בבלוג הזה אשתדל לתקשר בעיקר בתמונות, פחות במילים. אין טוב מויזואליה ורגש שעולם האופנה מעורר בי.
+      </p>
+      <p>
+        <em>fashionably late — כמו שאומרים.</em>
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">Mary Katrantzou</span>
+      <span class="tag">אופנת מעצבים</span>
+      <span class="tag">הדפסים</span>
+    </div>
+  </article>
+
+  <!-- POST IGGY -->
+  <article class="post">
+    <div style="position:relative;padding-top:56.25%;overflow:hidden;border-radius:8px 8px 0 0">
+      <iframe src="https://www.youtube.com/embed/cQMRmsK4-Xo" style="position:absolute;top:0;right:0;width:100%;height:100%;border:0" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date">מרץ 2014</span>
+        <span class="post-category">עבודות סטיילינג</span>
+      </div>
+      <h2>"פשוט מסובך" — איגי דיין והצללים | סטיילינג: פלר גרבויס</h2>
+      <p class="post-excerpt">
+        הקליפ "פשוט מסובך" של איגי דיין והצללים — שבו פלר גרבויס שימשה כסטייליסטית. עבודה מלאה שמשלבת סגנון אישי, תדמית אמן ושפה ויזואלית ברורה.
+      </p>
+    </div>
+    <div class="post-tags">
+      <span class="tag">סטיילינג לאמן</span>
+      <span class="tag">קליפ</span>
+      <span class="tag">איגי דיין</span>
+      <span class="tag">עבודות סטיילינג</span>
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>מוכנים לשינוי האמיתי?</h3>
+    <p>פגישת היכרות עם פלר גרבויס — נדבר על מה שמציק לכם במלתחה, מה אתם רוצים להשיג, ואיך נגיע לשם ביחד.</p>
+    <a href="peler-grabois-v3.html#contact" class="cta-btn">לתיאום פגישה</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2024 פלר גרבויס — סטייליסטית אישית | <a href="peler-grabois-v3.html">חזרה לאתר הראשי</a> | <a href="mailto:fleur.grabois@gmail.com">fleur.grabois@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

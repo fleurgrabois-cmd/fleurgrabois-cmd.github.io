@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פלר גרבויס | סטייליסטית אישית ומיתוג | חיפה</title>
+<meta name="description" content="פלר גרבויס – סטייליסטית אישית ומיתוג לנשים וגברים בחיפה. אילוף ארונות, יום קניות ממוקד, סדנאות לארגונים. שיחת היכרות 20 דקות בחינם.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Heebo',sans-serif;background:#fff;color:#0A0A0A;direction:rtl;text-align:right;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+:root{--black:#0A0A0A;--white:#fff;--red:#E63946;--red-dark:#A00C24;--gray-light:#F5F5F5;--gray-mid:#E8E8E8;--gray-text:#555;--gray-muted:#999}
+
+/* FLOAT */
+.wa-float{position:fixed;bottom:24px;left:24px;z-index:1000;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}
+.wa-float:hover{transform:scale(1.1)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-mid);height:64px;display:flex;align-items:center;padding:0 5%;justify-content:space-between}
+.nav-brand{font-size:1.3rem;font-weight:900;color:var(--black);letter-spacing:-.5px;white-space:nowrap}
+.nav-brand em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red)}
+.nav-menu{display:flex;gap:28px;align-items:center}
+.nav-menu a{font-size:.85rem;font-weight:500;color:var(--gray-text);transition:color .2s}
+.nav-menu a:hover{color:var(--black)}
+.nav-btn{background:var(--red)!important;color:#fff!important;padding:9px 20px!important;border-radius:2px!important;font-size:.83rem!important;font-weight:700!important;transition:background .2s!important}
+.nav-btn:hover{background:var(--red-dark)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:transparent;z-index:200}
+.hamburger span{display:block;width:24px;height:2px;background:var(--black);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;inset:0;top:64px;background:#fff;z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1.3rem;font-weight:600;color:var(--black);border-bottom:1px solid var(--gray-mid);width:100%;text-align:center;padding-bottom:16px}
+.mobile-menu .nav-btn{background:var(--red)!important;color:#fff!important;border:none!important;border-radius:2px!important;padding:14px 32px!important;font-size:1rem!important;width:100%;text-align:center;display:block}
+@media(max-width:680px){
+  .nav-menu a:not(.nav-btn){display:none}
+  .nav-menu .nav-btn{display:none}
+  .hamburger{display:flex}
+}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:55% 45%;min-height:92vh;direction:rtl}
+.hero-content{display:flex;flex-direction:column;justify-content:center;padding:80px 6% 80px 4%;background:var(--white)}
+.hero-image{position:relative;overflow:hidden;background:var(--gray-light)}
+.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 10s ease}
+.hero-image:hover img{transform:scale(1.05)}
+.hero-label{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:24px}
+.hero-label::before{content:'';display:block;width:24px;height:1.5px;background:var(--red)}
+.hero h1{font-family:'Heebo',sans-serif;font-size:clamp(2rem,3.6vw,3rem);font-weight:900;line-height:1.15;letter-spacing:-1px;color:var(--black);margin-bottom:22px}
+.hero h1 em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-weight:700;display:block;font-size:.9em}
+.hero h1 .h1-last{display:block;color:var(--black);font-style:normal;font-family:'Heebo',sans-serif;font-size:1em}
+.hero-sub{font-size:1rem;color:var(--gray-text);line-height:1.8;max-width:460px;margin-bottom:38px;padding-right:14px;border-right:2px solid var(--gray-mid)}
+.hero-ctas{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+.cta-red{background:var(--red);color:#fff;padding:13px 28px;border-radius:2px;font-size:.93rem;font-weight:700;font-family:'Heebo',sans-serif;border:2px solid var(--red);cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px}
+.cta-red:hover{background:var(--red-dark);border-color:var(--red-dark)}
+.cta-outline{background:transparent;color:var(--black);padding:13px 28px;border-radius:2px;font-size:.93rem;font-weight:600;font-family:'Heebo',sans-serif;border:2px solid var(--black);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.cta-outline:hover{background:var(--black);color:#fff}
+.hero-micro{font-size:.75rem;color:var(--gray-muted);letter-spacing:.5px}
+.hero-micro span{margin:0 6px;opacity:.4}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-content{padding:40px 5% 30px;order:2}
+  .hero-image{height:55vw;min-height:220px;max-height:340px;order:1}
+}
+
+/* SECTIONS */
+section{padding:80px 5%;margin:0 auto;max-width:1200px}
+.section-eyebrow{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.section-eyebrow::before{content:'';display:block;width:24px;height:1.5px;background:var(--red)}
+.section-title{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;line-height:1.15;letter-spacing:-.5px;color:var(--black);margin-bottom:40px}
+
+/* ABOUT */
+.about{background:var(--white);display:grid;grid-template-columns:45% 55%;gap:60px;align-items:center}
+.about-visual{position:relative;background:var(--gray-light);border-radius:4px;overflow:hidden;aspect-ratio:4/5}
+.about-visual img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.about-text h2{font-size:2rem;font-weight:900;margin-bottom:24px;color:var(--black);line-height:1.2}
+.about-text p{font-size:1rem;color:var(--gray-text);line-height:1.8;margin-bottom:20px}
+.about-list{list-style:none;margin-top:32px}
+.about-list li{font-size:.95rem;color:var(--gray-text);margin-bottom:16px;display:flex;gap:10px;align-items:flex-start}
+.about-list li .list-icon{flex-shrink:0;font-size:1.1rem}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:40px}.about-visual{aspect-ratio:4/3}}
+
+/* SERVICES */
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:40px}@media(max-width:680px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:var(--white);border:1px solid var(--gray-mid);overflow:hidden;border-radius:4px;transition:all .3s;display:flex;flex-direction:column;cursor:pointer}
+.service-card:hover{border-color:var(--red);box-shadow:0 12px 32px rgba(230,57,70,.12);transform:translateY(-2px)}
+.service-image{width:100%;height:200px;overflow:hidden;background:var(--gray-light)}
+.service-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.service-card:hover .service-image img{transform:scale(1.08)}
+.service-content{padding:24px 24px 20px;flex-grow:1;display:flex;flex-direction:column}
+.service-card h3{font-size:1.1rem;font-weight:700;color:var(--black);margin-bottom:8px}
+.service-card p{font-size:.88rem;color:var(--gray-text);line-height:1.7;flex-grow:1;margin-bottom:16px}
+.service-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--gray-mid);padding-top:16px;margin-top:auto}
+.service-price{font-size:1.05rem;font-weight:900;color:var(--black)}
+.service-price .price-note{font-size:.7rem;font-weight:400;color:var(--gray-muted);display:block;margin-top:2px}
+.service-price .price-old{font-size:.78rem;font-weight:400;color:var(--gray-muted);text-decoration:line-through;margin-left:5px}
+.service-link{font-size:.82rem;font-weight:700;color:var(--red);display:inline-flex;align-items:center;gap:5px;transition:gap .2s;white-space:nowrap}
+.service-link:hover{gap:9px}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(10,10,10,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{background:var(--white);border-radius:6px;max-width:620px;width:100%;max-height:88vh;overflow-y:auto;position:relative;animation:slideUp .25s ease;direction:rtl}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-close{position:absolute;top:12px;left:12px;width:40px;height:40px;border-radius:50%;background:rgba(10,10,10,.75);border:2px solid rgba(255,255,255,.6);cursor:pointer;font-size:1.2rem;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10;font-weight:700}
+.modal-close:hover{background:var(--red);border-color:var(--red)}
+.modal-img{width:100%;height:220px;object-fit:cover;border-radius:6px 6px 0 0;display:block}
+.modal-body{padding:32px}
+.modal-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.modal-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--red)}
+.modal-title{font-size:1.6rem;font-weight:900;color:var(--black);margin-bottom:20px;line-height:1.2}
+.modal-desc{font-size:.95rem;color:var(--gray-text);line-height:1.8;margin-bottom:16px}
+.modal-desc p{margin-bottom:12px}
+.modal-includes{margin:16px 0 24px}
+.modal-includes h4{font-size:.85rem;font-weight:700;color:var(--black);margin-bottom:10px;letter-spacing:.5px}
+.modal-includes ul{list-style:none}
+.modal-includes ul li{font-size:.9rem;color:var(--gray-text);padding-right:20px;position:relative;margin-bottom:8px;line-height:1.6}
+.modal-includes ul li::before{content:'✦';position:absolute;right:0;color:var(--red);font-size:.7rem;top:4px}
+.modal-meta{display:flex;gap:24px;align-items:center;background:var(--gray-light);border-radius:4px;padding:16px 20px;margin-bottom:24px;flex-wrap:wrap}
+.modal-meta-item{display:flex;flex-direction:column;gap:2px}
+.modal-meta-label{font-size:.7rem;color:var(--gray-muted);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.modal-meta-value{font-size:1.05rem;font-weight:900;color:var(--black)}
+.modal-meta-value .old{font-size:.8em;font-weight:400;color:#bbb;text-decoration:line-through;margin-right:6px}.service-price .old{font-size:.78rem;font-weight:400;color:#bbb;text-decoration:line-through}
+.modal-cta{display:block;width:100%;background:var(--red);color:#fff;padding:15px 28px;border-radius:3px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;border:none;cursor:pointer;transition:background .2s;text-align:center}
+.modal-cta:hover{background:var(--red-dark)}
+
+/* HOW */
+.how{background:var(--gray-light);max-width:100%;padding:80px 5%}
+.how-inner{max-width:1200px;margin:0 auto}
+.how-subtitle{font-size:1rem;color:var(--gray-text);margin-top:-20px;margin-bottom:56px;max-width:600px}
+.how-timeline{display:flex;align-items:flex-start;position:relative;gap:0}
+.how-timeline::before{content:'';position:absolute;top:28px;right:calc(100% / 6);left:calc(100% / 6);height:2px;background:rgba(230,57,70,.3);z-index:0}
+.how-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.how-circle{width:56px;height:56px;border-radius:50%;background:var(--red);color:#fff;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;flex-shrink:0;box-shadow:0 0 0 6px rgba(230,57,70,.12)}
+.how-connector{display:none}
+.how-body{margin-top:20px;padding:0 12px}
+.how-title{font-size:1.2rem;font-weight:700;color:var(--black);margin-bottom:10px}
+.how-desc{font-size:1rem;color:var(--gray-text);line-height:1.8;margin-bottom:14px}
+.how-tag{display:inline-block;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px;background:rgba(230,57,70,.1);color:var(--red-dark);letter-spacing:.3px}
+.how-cta{text-align:center;margin-top:48px}
+@media(max-width:700px){.how-timeline{flex-direction:column;align-items:flex-start;gap:0}.how-step{flex-direction:row;text-align:right;gap:20px;width:100%;padding-bottom:32px}.how-circle{flex-shrink:0}.how-connector{display:none}.how-body{margin-top:0;padding:0}.how-step::after{content:'';position:absolute;top:56px;right:27px;width:2px;height:calc(100% - 28px);background:rgba(230,57,70,.25)}.how-step:last-child::after{display:none}}
+
+/* TESTIMONIALS CAROUSEL */
+.testimonials{background:#111;padding:80px 5%;max-width:100%;margin:0}
+.testimonials .section-eyebrow{color:rgba(255,255,255,.5)}
+.testimonials .section-eyebrow::before{background:rgba(255,255,255,.5)}
+.testimonials .section-title{color:#fff}
+.testimonials-subtitle{font-size:1.15rem;color:rgba(255,255,255,.9);line-height:1.8;margin-top:-20px;margin-bottom:48px;max-width:680px;font-weight:500}
+.carousel-wrap{position:relative;max-width:1200px;margin:0 auto}
+.carousel-track-outer{overflow:hidden}
+.carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);gap:24px}
+.t-card{background:#1c1c1c;border:1px solid rgba(255,255,255,.08);padding:44px 36px 32px;border-radius:6px;position:relative;flex:0 0 calc(33.333% - 16px);box-sizing:border-box;transition:border-color .3s,transform .3s;overflow:hidden}
+.t-card::before{content:'';position:absolute;top:0;right:0;width:3px;height:0;background:var(--red);transition:height .4s ease}
+.t-card:hover{border-color:rgba(230,57,70,.4);transform:translateY(-4px)}
+.t-card:hover::before{height:100%}
+.t-mark{font-family:'Playfair Display',serif;font-size:6rem;color:var(--red);opacity:.25;position:absolute;top:8px;right:24px;line-height:1;pointer-events:none}
+.t-text{font-size:1rem;color:rgba(255,255,255,.8);line-height:1.9;margin-bottom:32px;font-style:italic;position:relative;z-index:1}
+.t-footer{display:flex;gap:14px;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:24px}
+.t-avatar{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;flex-shrink:0;letter-spacing:.5px;border:2px solid rgba(255,255,255,.1)}
+.t-name{font-size:1.05rem;font-weight:700;color:#fff}
+.t-role{font-size:.88rem;color:rgba(255,255,255,.6);margin-top:3px}
+.carousel-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:40px}
+.carousel-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .25s;color:rgba(255,255,255,.7)}
+.carousel-btn:hover{border-color:var(--red);color:var(--red);background:rgba(230,57,70,.08)}
+.carousel-dots{display:flex;gap:10px;align-items:center}
+.carousel-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .3s;padding:0}
+.carousel-dot.active{background:var(--red);width:24px;border-radius:3px}
+@media(max-width:860px){.t-card{flex:0 0 calc(50% - 12px)}}
+@media(max-width:560px){.t-card{flex:0 0 100%}}
+
+/* GIFT */
+.gift{background:var(--gray-light);border-radius:4px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:60px;margin:60px 0}
+.gift-text h3{font-size:1.8rem;font-weight:900;color:var(--black);margin-bottom:8px;line-height:1.2}
+.gift-text h4{font-size:1.2rem;font-weight:700;color:var(--red);margin-bottom:16px}
+.gift-desc{font-size:1rem;color:var(--gray-text);line-height:1.8;margin-bottom:20px}
+.gift-options{list-style:none;margin-bottom:28px}
+.gift-options li{font-size:.95rem;color:var(--gray-text);line-height:1.7;margin-bottom:12px}
+.cta-black{background:var(--black);color:var(--white);padding:13px 28px;border-radius:2px;font-weight:700;border:2px solid var(--black);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;font-size:.93rem;font-family:'Heebo',sans-serif}
+.cta-black:hover{background:transparent;color:var(--black)}
+.gift-visual{border-radius:4px;overflow:hidden}
+.gift-visual img{width:100%;object-fit:cover;border-radius:4px}
+@media(max-width:900px){.gift{grid-template-columns:1fr;padding:40px;gap:30px}}
+
+/* FAQ */
+.faq{background:var(--white)}
+.faq-inner{max-width:700px;margin:40px auto 0}
+.faq-row{border-bottom:1px solid var(--gray-mid);padding:24px 0}
+.faq-row.open .faq-a{display:block;animation:slideDown .3s ease-out}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;color:var(--black);user-select:none;padding:8px 0}
+.faq-q:hover{color:var(--red)}
+.faq-icon{font-size:1.5rem;color:var(--red);transition:transform .3s}
+.faq-row.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;margin-top:16px;font-size:.95rem;color:var(--gray-text);line-height:1.8;padding-bottom:8px}
+.faq-a p{margin-bottom:12px}
+.faq-a ul{margin:8px 0 12px;padding-right:20px}
+.faq-a ul li{margin-bottom:8px}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+
+/* CONTACT */
+.contact{background:var(--red);text-align:center;max-width:100%;padding:80px 5%}
+.contact .section-eyebrow{color:rgba(255,255,255,.8);justify-content:center}
+.contact .section-eyebrow::before{background:rgba(255,255,255,.8)}
+.contact .section-title{color:var(--white)}
+.contact-sub{font-size:1.1rem;color:rgba(255,255,255,.85);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+.contact-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.c-btn{padding:13px 24px;border-radius:2px;font-weight:700;font-size:.9rem;transition:all .2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:2px solid}
+.c-wa{background:#25D366;color:white;border-color:#25D366}
+.c-wa:hover{background:#20ba5c;border-color:#20ba5c}
+.c-phone{background:var(--white);color:var(--red);border-color:var(--white)}
+.c-phone:hover{background:transparent;color:var(--white)}
+.c-ig{background:transparent;color:var(--white);border-color:rgba(255,255,255,.6)}
+.c-ig:hover{background:var(--white);color:var(--red);border-color:var(--white)}
+.contact-note{font-size:.8rem;color:rgba(255,255,255,.6);letter-spacing:1px}
+.contact-note span{margin:0 6px;opacity:.5}
+
+/* FOOTER */
+footer{background:var(--black);color:#fff;padding:40px 5%;text-align:center;border-top:1px solid var(--gray-mid)}
+.footer-brand{font-size:1.2rem;font-weight:900;margin-bottom:20px}
+.footer-brand em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red)}
+.footer-nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;font-size:.9rem}
+.footer-nav a{color:#fff;transition:color .2s}
+.footer-nav a:hover{color:var(--red)}
+.footer-copy{font-size:.75rem;color:#999}
+
+
+/* PORTFOLIO CAROUSEL */
+.port-carousel-wrap{position:relative;overflow:hidden;margin-top:40px;border-radius:4px}
+.port-carousel-track{display:flex;gap:12px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.port-card{cursor:pointer;overflow:hidden;border-radius:4px;border:1px solid var(--gray-mid);transition:all .3s;flex:0 0 calc(25% - 9px)}
+.port-card:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,57,70,.12)}
+.port-img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--gray-light)}
+.port-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.port-card:hover .port-img-wrap img{transform:scale(1.04)}
+.port-name{padding:6px 8px;font-size:.78rem;font-weight:600;color:var(--black);text-align:center}
+.port-carousel-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:20px}
+.port-carousel-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gray-mid);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .2s;color:var(--gray-text)}
+.port-carousel-btn:hover{border-color:var(--red);color:var(--red)}
+@media(max-width:860px){.port-card{flex:0 0 calc(50% - 6px)}}
+@media(max-width:480px){.port-card{flex:0 0 calc(50% - 6px)}}
+.comm-card{border:1px solid var(--gray-mid);border-radius:4px;overflow:hidden;margin-bottom:32px}
+.comm-header{padding:24px 28px 20px}
+.comm-tag{font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.comm-title{font-size:1.4rem;font-weight:900;color:var(--black);margin-bottom:8px;line-height:1.2}
+.comm-desc{font-size:.9rem;color:var(--gray-text);line-height:1.7;margin:0}
+.slideshow{position:relative;width:100%;background:#111;direction:ltr}
+.ss-stage{width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
+.ss-img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .4s ease}
+.ss-img.fade{opacity:0}
+.ss-prev,.ss-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:none;color:#fff;width:40px;height:40px;font-size:1.2rem;cursor:pointer;z-index:5;border-radius:2px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ss-prev{left:8px}.ss-next{right:8px}
+.ss-prev:hover,.ss-next:hover{background:rgba(230,57,70,.8)}
+.ss-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .2s}
+.dot.active{background:#fff}
+.lb-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.88);align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:20px}
+.lb-overlay.open{display:flex}
+.lb-img{max-height:80vh;max-width:90vw;object-fit:contain;border-radius:4px}
+.lb-name{color:#fff;font-size:1rem;font-weight:600}
+.lb-close{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
+.lb-close:hover{background:rgba(255,255,255,.3)}
+
+
+
+
+
+#yucca .ss-stage{background:#fff}
+#yucca .ss-img{object-fit:contain;background:#fff}
+
+
+.yucca-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 3px 3px}
+.yucca-thumb{aspect-ratio:3/4;overflow:hidden;background:#fff;cursor:pointer}
+.yucca-thumb img{width:100%;height:100%;object-fit:contain;background:#fff;transition:transform .3s}
+.yucca-thumb:hover img{transform:scale(1.04)}
+@media(max-width:560px){.yucca-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+.iggy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 3px 3px}
+.comm-thumb{aspect-ratio:16/9;overflow:hidden;background:var(--gray-light);cursor:pointer}
+.comm-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.comm-thumb:hover img{transform:scale(1.04)}
+@media(max-width:560px){.iggy-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+
+  .nav-brand span{display:block;margin-right:0!important;font-size:.72rem!important}
+}
+
+
+
+@media(max-width:680px){
+  
+  
+}
+
+
+.nav-tagline{font-size:.78rem;font-weight:500;color:var(--gray-text);letter-spacing:.3px;margin-right:10px;font-family:'Heebo',sans-serif}
+
+}
+
+
+
+  .nav-tagline{display:none}
+}
+
+
+@media(max-width:560px){
+  nav{height:auto;min-height:56px;padding:10px 4%;flex-wrap:wrap;gap:8px}
+  .nav-brand{font-size:1rem;white-space:nowrap}
+  .nav-tagline{display:none}
+  .nav-btn{padding:7px 14px!important;font-size:.78rem!important}
+}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:all .6s ease-out}
+.reveal.show{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.1s}
+.delay-2{transition-delay:.2s}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/972534209740?text=שלום+פלר!+אשמח+לקבוע+שיחת+היכרות" class="wa-float" target="_blank">💬</a>
+
+<!-- ══════════════ MODALS ══════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
+
+  <!-- אילוף ארונות -->
+  <div class="modal" id="modal-wardrobe">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_000.jpg" alt="אילוף ארונות" onerror="this.src='https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">שירות בסיס</div>
+      <h2 class="modal-title">אילוף ארונות</h2>
+      <div class="modal-desc"><p>כי הארון הפך למפלצת — והגיע הזמן לאלף אותו. שאלון הכנה שנשלח אלייך מראש, ואז מגיעה אליך הביתה לפגישה ממוקדת שמשנה את ה-game.</p></div>
+      <div class="modal-includes">
+        <h4>מה כלול:</h4>
+        <ul>
+          <li>שאלון הכנה אישי לפני הפגישה</li>
+          <li>אבחון מבנה גוף וסגנון אישי</li>
+          <li>סינון וסידור הארון לפי שיטת אילוף הארונות שלי</li>
+          <li>בניית שילובים חדשים ומפתיעים מהבגדים הקיימים</li>
+          <li>רשימת פריטים חסרים להמשך</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">משך</span><span class="modal-meta-value">כ-4 שעות</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">1,300 ₪</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">מיקום</span><span class="modal-meta-value">אצלך בבית</span></div>
+      </div>
+      <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+אילוף+ארונות" class="modal-cta" target="_blank">💬 לתיאום שיחת היכרות חינם</a>
+    </div>
+  </div>
+
+  <!-- ציידת פריטים -->
+  <div class="modal" id="modal-shopping">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_001.jpg" alt="ציידת פריטים" onerror="this.src='https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">שירות בסיס</div>
+      <h2 class="modal-title">ציידת פריטים — יום קניות ממוקד</h2>
+      <div class="modal-desc"><p>יודעת לשלוף לך את ה"אחד". יוצאות יחד לשטח — אני שולפת עבורך את הפריטים המדויקים וחוסכת לך זמן ותסכול בתאי המדידה.</p></div>
+      <div class="modal-includes">
+        <h4>מה כלול:</h4>
+        <ul>
+          <li>שיחת הכרות וקבלת שאלון הכנה</li>
+          <li>בחירה מראש של החנויות המתאימות לצרכים ולתקציב</li>
+          <li>ליווי קניות ממוקד — אני שולפת, אתם מודדים ומחליטים</li>
+          <li>התאמה לגוף, לסגנון ולמה שכבר יש בארון</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">משך</span><span class="modal-meta-value">כ-4 שעות</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">1,300 ₪</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">מיקום</span><span class="modal-meta-value">מתחם קניות שנבחר יחד</span></div>
+      </div>
+      <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+יום+קניות+ממוקד" class="modal-cta" target="_blank">💬 לתיאום שיחת היכרות חינם</a>
+    </div>
+  </div>
+
+  <!-- הרצאות וסדנאות -->
+  <div class="modal" id="modal-lectures">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_002.jpg" alt="הרצאות וסדנאות" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">B2B · ארגונים</div>
+      <h2 class="modal-title">הרצאות וסדנאות לארגונים</h2>
+      <div class="modal-desc"><p>אם אתם מחפשים עוד הרצאה בנאלית על טרנדים, אני כנראה לא הכתובת. הסדנאות שלי מחברות את עולמות השיווק והתקשורת לפסיכולוגיה של הלבוש ולחיים האמיתיים.</p></div>
+      <div class="modal-includes">
+        <h4>נושאי הרצאה לדוגמה:</h4>
+        <ul>
+          <li><strong>לבוש בונה מציאות:</strong> איך הבגדים שאנחנו בוחרים בבוקר משפיעים פיזית על הביטחון ועל ההישגים שלנו</li>
+          <li><strong>אופנה, טקסטיל ומיקרופלסתיק:</strong> הצד האפל של האופנה המהירה — בגדים רעילים ואיך קונים חכם</li>
+          <li><strong>חכם על חלשים:</strong> איך רשתות האופנה גורמות לך לשנוא את תא המדידה</li>
+          <li><strong>אפקט אוזמפיק:</strong> איך מתלבשים כשהגוף משתנה בכל חודש?</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">בהתאמה אישית</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">מיקום</span><span class="modal-meta-value">אצלכם בחברה / אירוע</span></div>
+      </div>
+      <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+סדנאות+לארגונים" class="modal-cta" target="_blank">💬 סגרו לנו פינה בלו"ז</a>
+    </div>
+  </div>
+
+  <!-- טיפול שורש -->
+  <div class="modal" id="modal-rootjob">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_003.jpg" alt="טיפול שורש" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">חבילה משולבת · יום אחד</div>
+      <h2 class="modal-title">טיפול שורש למלתחה — הכל כלול ביום אחד</h2>
+      <div class="modal-desc"><p>הפתרון המלא בפחות זמן: מתחילים בבוקר בסידור הארון בבית, בונים רשימת קניות ממוקדת — ואז יוצאים יחד באותו היום להשלים את החוסרים. ללא צורך בתיאום שני מפגשים.</p></div>
+      <div class="modal-includes">
+        <h4>מה כלול:</h4>
+        <ul>
+          <li>סידור הארון בבית בבוקר — סינון, דיוק ובניית שילובים</li>
+          <li>הכנת רשימת קניות ממוקדת ומדויקת</li>
+          <li>יציאה משותפת לקניות באותו היום</li>
+          <li>השלמת החוסרים בחכמה ובלי בזבוז</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">2,450 ₪</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">כולל</span><span class="modal-meta-value">ארון + קניות</span></div>
+      </div>
+      <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+טיפול+שורש" class="modal-cta" target="_blank">💬 לתיאום שיחת היכרות חינם</a>
+    </div>
+  </div>
+
+  <!-- חבילת פרימיום - שופינג בשניים -->
+  <div class="modal" id="modal-double">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_004.jpg" alt="שופינג בשניים" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">חבילת פרימיום</div>
+      <h2 class="modal-title">חבילת פרימיום — שופינג בשניים</h2>
+      <div class="modal-desc"><p>חוויה קריאטיבית ומלאת פאן לאישה וחברה, אמא ובת, או לבני זוג שרוצים לדייק את המלתחה יחד.</p></div>
+      <div class="modal-includes">
+        <h4>מה כלול:</h4>
+        <ul>
+          <li>שאלון הכנה אישי</li>
+          <li>שיחת הכנה קצרה לפני</li>
+          <li>ליווי קניות לשתיים — כ-4 שעות</li>
+          <li>מדידות והתאמה אישית לכל אחת</li>
+          <li>בלי תסכולים בתא המדידה</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">1,950 ₪ <span class="old">2,600 ₪</span></span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">משך</span><span class="modal-meta-value">כ-4 שעות · שניים</span></div>
+      </div>
+      <a href="#contact" class="modal-cta" onclick="closeModal()">💬 לתיאום שיחת היכרות חינם</a>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-keter">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="images/img_005.jpg" alt="ליווי מלא הכתר" onerror="this.src='https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80&auto=format&fit=crop'">
+    <div class="modal-body">
+      <div class="modal-eyebrow">חבילת פרימיום מלאה</div>
+      <h2 class="modal-title">חבילת ליווי שלמה — "הכתר"</h2>
+      <div class="modal-desc"><p>תהליך הדרגתי ומעמיק — שיחת היכרות אונליין, סידור הארון בבית, וליווי קניות. הכל כלול.</p></div>
+      <div class="modal-includes">
+        <h4>מה כלול:</h4>
+        <ul>
+          <li>שאלון הכנה אישי</li>
+          <li>מפגש ארון בבית — סינון, דיוק ובניית שילובים (יום א')</li>
+          <li>יום קניות ממוקד — השלמת החוסרים (יום ב')</li>
+          <li>תיקיית לוקים מצולמת לנייד</li>
+          <li>שבועיים ליווי בוואטסאפ אחרי הפגישות</li>
+        </ul>
+      </div>
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">מחיר</span><span class="modal-meta-value">2,450 ₪</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">משך</span><span class="modal-meta-value">2 מפגשים + שבועיים ליווי וואטסאפ</span></div>
+      </div>
+      <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+חבילת+הכתר" class="modal-cta" target="_blank">💬 לתיאום שיחת היכרות חינם</a>
+    </div>
+  </div>
+
+</div><!-- end modal-overlay -->
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">פלר <em>גרבויס</em> <span class="nav-tagline">| סטיילינג אישי, פיצוח מלתחה וליווי בתקופות שינוי</span></div>
+  <div class="nav-menu">
+    <a href="#about">אודות</a>
+    <a href="#services">שירותים</a>
+    <a href="#how">תהליך</a>
+    <a href="#portfolio">תיק עבודות</a>
+    <a href="#testimonials">המלצות</a>
+    <a href="#faq">שאלות</a>
+    <a href="blog.html">בלוג</a>
+    <a href="#contact" class="nav-btn">צרי קשר</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="תפריט">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" onclick="closeMobileMenu()">אודות</a>
+  <a href="#services" onclick="closeMobileMenu()">שירותים</a>
+  <a href="#how" onclick="closeMobileMenu()">תהליך</a>
+  <a href="#portfolio" onclick="closeMobileMenu()">תיק עבודות</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">המלצות</a>
+  <a href="#faq" onclick="closeMobileMenu()">שאלות</a>
+  <a href="blog.html" onclick="closeMobileMenu()">בלוג</a>
+  <a href="#contact" class="nav-btn" onclick="closeMobileMenu()">קבעי שיחת היכרות חינם</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-label">סטיילינג אישי</div>
+    <h1>סטיילינג שמשנה<em>איך את מרגישה,</em><span class="h1-last">לא רק איך את נראית.</span></h1>
+    <p class="hero-sub">מעל 15 שנה בעולמות העיצוב, המדיה והשיווק לימדו אותי שמותג מנצח נבנה מבפנים החוצה. אחרי שעשיתי סטיילינג בהפקות טלוויזיה (כמו 'רוקדים עם כוכבים' ו'המירוץ למיליון'), הלבשתי לקוחות פרטיים, העברתי סדנאות בארגונים והובלתי מהלכי שיווק, אני יודעת שהארון שלך הוא לא מחסן של זיכרונות ובגדים מן העבר – הוא הכלי המהיר ביותר לנוע לעבר המטרות שלך, למשוך את ההזדמנויות הנכונות ולהרגיש מעולה מול המראה. ביחד, נרתום את המלתחה ואת הקניות שלך כדי שיעבדו בשבילך.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/972534209740?text=שלום+פלר!+אשמח+לקבוע+שיחת+היכרות" class="cta-red" target="_blank">קבעי שיחת היכרות חינם</a>
+      <a href="#services" class="cta-outline">לחבילות השירותים</a>
+    </div>
+    <p class="hero-micro">20 דקות<span>·</span>ללא התחייבות<span>·</span>טלפון, וואטסאפ או זום</p>
+  </div>
+  <div class="hero-image">
+    <img src="images/img_005.jpg" alt="ליווי קניות אישי">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <img src="images/img_006.jpg" alt="פלר גרבויס - סטייליסטית אישית">
+  </div>
+  <div class="about-text">
+    <div class="section-eyebrow">אודות</div>
+    <h2>הסדר מתחיל בפרטים הקטנים.</h2>
+    <p>כולנו מכירים את הפינות האלה בבית או בארון שאנחנו עוברים לידן כל יום, יודעים שהן שם, וממשיכים ללכת. "אני תכף אטפל בזה", "זה לא באמת מפריע". אבל האמת היא שזה כן מפריע. עומס, עייפות ושגרת החיים גורמים לנו לפעמים לתת לכאוס להצטבר, עד שהוא חונק את המקום לנשימה.</p>
+    <p>אני פלר, סטייליסטית אישית ואני כאן כדי לעזור לך לפנות את מה שכבר לא משרת אותך, לאלף את הארון שהפך למפלצת, ולהחזיר את השליטה, הרוגע והשקט פנימה.</p>
+    <p>אני מלווה א/נשים בתקופות של שינוי: קריירה חדשה, עשור חדש, או אחרי לידה. חנויות האופנה מלאות בשבלונות שלא מתאימות למבנה הגוף הישראלי, והמטרה שלי היא לשלוף עבורך רק את מה שנכון ומחמיא לך. בלי בזבוז כסף ובלי תסכולים בתאי המדידה. הבגד צריך לשרת אותך ולתת לך עוצמה מול העולם.</p>
+    <ul class="about-list">
+      <li><span class="list-icon">📊</span><span><strong>החיבור בין אסטרטגיה לעיצוב:</strong> הגעתי לסטיילינג אחרי 15 שנה כמנהלת שיווק ומדיה (קשת, הטכניון, קבוצת "הארץ") ולימודי עיצוב בסטודיו 6B. מה הקשר? כל החיים פיצחתי מסרים ויזואליים, והיום אני מביאה את האסטרטגיה הזו ישר לארון שלך – עם הבנה עמוקה בגזרות ובתפרים הקטנים שיגרמו לבגד לשבת עלייך בול.</span></li>
+      <li><span class="list-icon">🤝</span><span><strong>בגובה העיניים, בלי שיפוטיות:</strong> התהליך איתי הוא קודם כל מרחב בטוח, נגיש וזמין עבורך. בלי "חוקי אופנה" נוקשים, בלי פילטרים מאולצים ובלי נוסחאות משעממות. אני כאן איתך כדי לייצר סדר פרקטי, כלכלי ומדויק שמתאים לחיים האמיתיים שלך.</span></li>
+      <li><span class="list-icon">🌿</span><span><strong>אופנה חכמה וצרכנות מודעת:</strong> הצרכנות שלנו השתנתה. במקום לקנות עוד פריטים גנריים שיישארו עם טיקט, אני מלמדת אותך איך לנצל נכון את מה שכבר יש לך בארון, איך לשדרג מלתחה קיימת, ואיך לקנות מדויק, חכם וסביבתי יותר – בלי לבזבז אנרגיה וכסף מיותר.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" style="max-width:100%;padding:80px 5%">
+  <div class="section-eyebrow reveal">המלצות</div>
+  <h2 class="section-title reveal">בלי פילטרים: הפידבקים האמיתיים</h2>
+  <p class="testimonials-subtitle reveal">בסוף, השינוי הכי גדול לא קורה בחנות, אלא מול המראה בבית. הנה כמה הודעות וואטסאפ (אמיתיות לגמרי) שקיבלתי מנשים וגברים שעשו סדר בארון ובחיים.</p>
+  <div class="carousel-wrap reveal">
+    <div class="carousel-track-outer">
+      <div class="carousel-track" id="carousel-track">
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">"אמא, וואו, את יפה!" — אין מחמאה כנה יותר ממחמאה של ילדה בת 3.5. אתמול מדדתי את הבגדים מהתהליך עם פלר, והבת הגדולה שלי פשוט עמדה מוקסמת, לא הפסיקה להגיד לי שאני יפהפייה ורצה לנעול את הנעליים החדשות שלי. התהליך הזה הוא לא רק על בגדים — הוא על איך שאנחנו מרגישות מול המראה ומול העולם. חוויה שהיא פשוט Life Changing. תודה אהובה!</p>
+          <div class="t-footer"><div class="t-avatar">יע</div><div><div class="t-name">יעל</div><div class="t-role">רכזת ת.מתקדמים · טכניון · יוני 2026</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">תודה לך, היה מושלם. הרמת אותי לשמיים תבורכי 🙏 שלחתי את התמונות לכל הילדים — היו בהלם.</p>
+          <div class="t-footer"><div class="t-avatar">שב</div><div><div class="t-name">שבע</div><div class="t-role">מנהלת מעון ויצו · מאי 2026</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">נהניתי, החכמתי, ולא היה לי מושג שככה אפשר להסתכל על ארון — ודרכו להגיד: "אני. מכבדת אותי".</p>
+          <div class="t-footer"><div class="t-avatar">מי</div><div><div class="t-name">מיכלי, 32</div><div class="t-role">עובדת סוציאלית קלינית · מאי 2026</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">התחלתי להתלבש מחויט אפילו לעבודה, וקיבלתי ים של מחמאות. המראה החדש נותן לי יותר ביטחון וסוג של כבוד שאני מאוד אוהב.</p>
+          <div class="t-footer"><div class="t-avatar">אס</div><div><div class="t-name">אסף, 29</div><div class="t-role">מהנדס תוכנה</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">סוף סוף הבנתי גם איך קורה שאני קונה ולא לובשת. תודות לפלר, טעויות גדולות כאלה לא יישנו.</p>
+          <div class="t-footer"><div class="t-avatar">סג</div><div><div class="t-name">סיגי, 44</div><div class="t-role">היי-טק</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">פלר מדהימה. כל התהליך נבנה עם הרבה חשיבה ובצורה מאוד מקצועית. חוץ מזה שפשוט היה כיף איתה.</p>
+          <div class="t-footer"><div class="t-avatar">שר</div><div><div class="t-name">שרית, 33</div><div class="t-role">רואת חשבון</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">אפילו קיבלתי מחמאות על בגדים ישנים רק מהעובדה שלבשתי אותם אחרת אחרי סידור המלתחה. היה ממש כיף איתך.</p>
+          <div class="t-footer"><div class="t-avatar">לי</div><div><div class="t-name">ליאת, 38</div><div class="t-role">פסיכולוגית</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">פלר התגלתה אמפטית, בעלת ביקורת בונה ונעימה. מומלץ לגברים ו-workaholic לשדרג ת'לוק.</p>
+          <div class="t-footer"><div class="t-avatar">או</div><div><div class="t-name">אודי</div><div class="t-role">בעל עסק תוכנה</div></div></div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-mark">"</span>
+          <p class="t-text">חברות ונשים עוד ישמעו עליך ממני באהבה רבה. אילן כל כך מתלהב מההתלהבות שכבר אמר שאני צריכה לעשות זאת שוב.</p>
+          <div class="t-footer"><div class="t-avatar">אי</div><div><div class="t-name">איריס, 45</div><div class="t-role">מורה אקדמאית</div></div></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="carousel-prev" aria-label="הקודם">&#x2192;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+      <button class="carousel-btn" id="carousel-next" aria-label="הבא">&#x2190;</button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-eyebrow reveal">שירותים</div>
+  <h2 class="section-title reveal">מה אני מציעה.</h2>
+  <div class="services-grid">
+
+    <div class="service-card reveal" onclick="openModal('wardrobe')">
+      <div class="service-image"><img src="images/img_000.jpg" alt="אילוף ארונות" onerror="this.src='https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80&auto=format&fit=crop'"></div>
+      <div class="service-content">
+        <h3>אילוף ארונות</h3>
+        <p>סינון, דיוק ולימוד כלים לחיים. בונים שילובים חדשים ומפתיעים מהבגדים שכבר יש לך בארון, בלי בזבוז כסף.</p>
+        <div class="service-footer">
+          <div class="service-price">1,300 ₪<span class="price-note">כ-4 שעות · אצלך בבית</span></div>
+          <span class="service-link">לפרטים ←</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card reveal delay-1" onclick="openModal('shopping')">
+      <div class="service-image">
+        <img src="images/img_001.jpg" alt="ציידת פריטים" onerror="this.src='https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80&auto=format&fit=crop'">
+      </div>
+      <div class="service-content">
+        <h3>ציידת פריטים — יום קניות ממוקד</h3>
+        <p>יוצאות לשטח כדי לתרגם את מה שלמדנו על הגוף שלך למציאות. חיפוש פריטי מפתח שישדרגו את המלתחה שלך בחכמה.</p>
+        <div class="service-footer">
+          <div class="service-price">1,300 ₪<span class="price-note">כ-4 שעות · קניות</span></div>
+          <span class="service-link">לפרטים ←</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-card reveal delay-2" onclick="openModal('keter')">
+      <div class="service-image">
+        <img src="images/img_005.jpg" alt="ליווי מלא הכתר" onerror="this.src='https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80&auto=format&fit=crop'">
+      </div>
+      <div class="service-content">
+        <h3>ליווי מלא — "הכתר"</h3>
+        <p>החבילה המלאה: אילוף ארונות + יום קניות + שבועיים ליווי אישי בוואטסאפ. מסידור הארון בבית ועד לחזרה מהקניות עם ביטחון שלא צריך להסביר.</p>
+        <div class="service-footer">
+          <div class="service-price">2,450 ₪<span class="price-note">2 מפגשים + שבועיים ליווי וואטסאפ</span></div>
+          <span class="service-link">לפרטים ←</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="service-card reveal" onclick="openModal('double')">
+      <div class="service-image">
+        <img src="images/img_004.jpg" alt="שופינג בשניים" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80&auto=format&fit=crop'">
+      </div>
+      <div class="service-content">
+        <h3>חבילת פרימיום — שופינג בשניים</h3>
+        <p>חוויה קריאטיבית ומלאת פאן לאישה וחברה, אמא ובת, או לבני זוג שרוצים לדייק את המלתחה יחד.</p>
+        <div class="service-footer">
+          <div class="service-price">1,950 ₪ <span class="old">2,600 ₪</span><span class="price-note">כ-4 שעות · שניים</span></div>
+          <span class="service-link">לפרטים ←</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how" style="max-width:100%;padding:80px 5%">
+  <div class="how-inner">
+    <div class="section-eyebrow reveal">תהליך</div>
+    <h2 class="section-title reveal">איך זה עובד? (פשוט ומהיר)</h2>
+    <p class="how-subtitle reveal">בלי תסכולים ובלי אותיות קטנות. תהליך ממוקד שמביא תוצאות מהרגע הראשון.</p>
+    <div class="how-timeline">
+
+      <div class="how-step reveal">
+        <div class="how-circle">01</div>
+        <div class="how-connector"></div>
+        <div class="how-body">
+          <div class="how-title">שיחת היכרות</div>
+          <div class="how-desc">קפה וסטייל — 20 דקות ממוקדות. מבינים איפה הארון שלך תקוע ואיזה מענה הכי נכון לך.</div>
+          <span class="how-tag">חינם · ללא התחייבות</span>
+        </div>
+      </div>
+
+      <div class="how-step reveal delay-1">
+        <div class="how-circle">02</div>
+        <div class="how-connector"></div>
+        <div class="how-body">
+          <div class="how-title">מהדקים מסלול</div>
+          <div class="how-desc">מתאימים את החבילה הנכונה למטרות ולתקציב שלך. מסידור ארון ועד ליווי פרימיום מלא.</div>
+          <span class="how-tag">את בוחרת קצב</span>
+        </div>
+      </div>
+
+      <div class="how-step reveal delay-2">
+        <div class="how-circle">03</div>
+        <div class="how-body">
+          <div class="how-title">יוצאים לדרך</div>
+          <div class="how-desc">נפרדים ממה שלא משרת, בונים שילובים מפתיעים ומחזירים את הביטחון מול המראה.</div>
+          <span class="how-tag">תוצאות מהיום הראשון</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="how-cta reveal">
+      <a href="https://wa.me/972534209740?text=שלום+פלר!+אשמח+לקבוע+שיחת+היכרות" class="cta-red" target="_blank">קבעי שיחת היכרות חינם ←</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="section-eyebrow reveal">תיק עבודות</div>
+  <h2 class="section-title reveal">לקוחות אמיתיים. שינויים אמיתיים.</h2>
+  <div class="port-carousel-wrap">
+    <div class="port-carousel-track" id="port-track">
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work2.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/sheva1.jpeg" alt="שבע" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work3.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/sheva2.jpeg" alt="שבע" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work4.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/sheva3.jpeg" alt="שבע" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work5.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/sheva4.jpeg" alt="שבע" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work6.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/t.jpg" alt="לקוחה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work7.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/adi.jpg" alt="אדי" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work8.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/Slide2.JPG" alt="מייקאובר" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work9.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/Slide4.JPG" alt="פרינסס" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/fleur_work1.jpeg" alt="פלר בעבודה" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_007.jpg" alt="אסף" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_008.jpg" alt="איריס" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_009.jpg" alt="ניצן" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_010.jpg" alt="עומר" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_011.jpg" alt="יואב" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_012.jpg" alt="זוהר" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_013.jpg" alt="שי" loading="lazy"></div>
+        
+      </div>
+      <div class="port-card" onclick="openLB(this)">
+        <div class="port-img-wrap"><img src="images/img_014.jpg" alt="רויטל" loading="lazy"></div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="port-carousel-nav">
+    <button class="port-carousel-btn" id="port-prev">&#x2192;</button>
+    <button class="port-carousel-btn" id="port-next">&#x2190;</button>
+  </div>
+
+  <div class="section-eyebrow reveal" style="margin-top:64px">מסחרי</div>
+
+  <div class="comm-card reveal">
+    <div class="comm-header">
+      <div class="comm-tag">סטיילינג לקליפ</div>
+      <h3 class="comm-title">"פשוט מסובך" | איגי דיין והצללים</h3>
+      <p class="comm-desc">עיצוב תלבושות לקליפ המוזיקלי</p>
+    </div>
+    <div class="iggy-grid"><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_015.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_016.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_017.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_018.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_019.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_020.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_021.jpg" alt="" loading="lazy"></div><div class="comm-thumb" onclick="openLB(this)"><img src="images/img_022.jpg" alt="" loading="lazy"></div></div>
+  </div>
+
+  <div class="comm-card reveal">
+    <div class="comm-header">
+      <div class="comm-tag">סטיילינג לקטלוג</div>
+      <h3 class="comm-title">YUCCA</h3>
+      <p class="comm-desc">סטיילינג לצילומי קטלוג</p>
+    </div>
+    <div class="yucca-grid"><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_023.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_024.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_025.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_026.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_027.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_028.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_029.jpg" alt="" loading="lazy"></div><div class="yucca-thumb" onclick="openLB(this)"><img src="images/img_030.jpg" alt="" loading="lazy"></div></div>
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb-overlay" onclick="closeLB()">
+  <button class="lb-close" onclick="closeLB()">&#10005;</button>
+  <img class="lb-img" id="lb-img" src="" alt="">
+  <div class="lb-name" id="lb-name"></div>
+</div>
+
+<!-- GIFT -->
+<div class="gift" id="gift">
+  <div class="gift-text">
+    <div class="section-eyebrow">מתנה</div>
+    <h3>מתנה שלא שוכחים!</h3>
+    <h4>במקום עוד חפץ – תנו להם חוויה!</h4>
+    <p class="gift-desc">יום הולדת עגול, חברה שעוברת שינוי בחיים, מתנה לאמא, או סתם כי מגיע לה – שובר לחוויית סטיילינג הוא תכלס אחת המתנות הכי שוות, מקוריות ומרגשות שאפשר לקנות למישהי (וגם למישהו!). בניתי שתי אפשרויות לשובר, שנשלח בעיצוב דיגיטלי נקי או מודפס באריזה אסטטית:</p>
+    <ul class="gift-options">
+      <li>✨ <strong>חוויית בוסטר (מתנה לכל כיס):</strong> שובר בשווי 690 ₪ — מפגש ממוקד של כ-2.5 שעות לבחירה: אילוף ארונות או ציידת פריטים.</li>
+      <li>👑 <strong>חוויית הפרימיום המלאה:</strong> שובר לחבילה המשולבת ("טיפול שורש" למלתחה) — מסידור הארון בבית ועד לחזרה מהקניות עם ביטחון שלא צריך להסביר.</li>
+    </ul>
+    <a href="https://wa.me/972534209740?text=שלום+פלר,+אשמח+לשמוע+על+שובר+מתנה" class="cta-black" target="_blank">🎁 לחצו כאן לעיצוב והזמנת שובר ברגע</a>
+  </div>
+  <div class="gift-visual"><img src="images/img_031.jpg" alt="שובר מתנה לחוויית סטיילינג"></div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-eyebrow reveal">שאלות</div>
+  <h2 class="section-title reveal">ת'כלס – השאלות שכולם שואלים אותי...</h2>
+  <div class="faq-inner reveal">
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">איפה השירות ניתן? את מגיעה לבית הלקוח?<span class="faq-icon">+</span></div><div class="faq-a"><p>כן! ניתוח המלתחה ואילוף הארונות קורים אצלך בבית, ויום הקניות מתבצע במתחמי הקניות שנבחר יחד.</p><p>העוגן שלי הוא בחיפה, בקריות וביישובי הסביבה (מחוף הכרמל, נשר והעמקים ועד אזור זכרון ובנימינה), אבל אני לגמרי מגיעה לכל מקום. פגישות ההיכרות יכולות להתבצע גם טלפונית או בזום.</p></div></div>
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">האם את עובדת גם עם גברים?<span class="faq-icon">+</span></div><div class="faq-a"><p>חד משמעית כן. למעשה, מחצית מלקוחות הסטיילינג שלי הם גברים!</p><p>גברים מגיעים אליי בדרך כלל בצמתים של שינוי בחיים – לקראת תפקיד חדש, מעבר לקריירה עצמאית, יציאה לדרך חדשה בפרק ב', או לקראת נסיעה עסקית חשובה. התהליך איתי הוא סופר נגיש, פרקטי ובגובה העיניים.</p></div></div>
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">מה ההבדל בין ארגון מלתחה ליום קניות?<span class="faq-icon">+</span></div><div class="faq-a"><p>מדובר בשני שירותים שונים לחלוטין, אבל הם הכי חזקים כשהם משלימים זה את זה.</p><ul><li><strong>ארגון המלתחה ("אילוף ארונות"):</strong> סינון, דיוק ולימוד כלים לחיים. רווח נקי מהמלתחה הקיימת – עוד לפני שהוצאת שקל אחד.</li><li><strong>יום קניות ממוקד:</strong> יוצאות לשטח לתרגם את מה שלמדנו על הגוף שלך למציאות. המטרה: לקנות חכם, לא הרבה.</li></ul></div></div>
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">האם את עושה סדנאות והרצאות לחברות וארגונים?<span class="faq-icon">+</span></div><div class="faq-a"><p>כן, וזה אחד החלקים שאני הכי אוהבת בעבודה שלי. הסדנאות שלי מחברות את עולמות השיווק והתקשורת לפסיכולוגיה של הלבוש.</p><ul><li><strong>לבוש בונה מציאות:</strong> איך הבגדים שבוחרים בבוקר משפיעים על הביטחון וההישגים.</li><li><strong>אופנה, טקסטיל ומיקרופלסתיק:</strong> הצד האפל של האופנה המהירה ואיך עוברים לאופנה מעגלית.</li><li><strong>חכם על חלשים:</strong> איך רשתות האופנה גורמות לך לשנוא את תא המדידה.</li><li><strong>אפקט אוזמפיק:</strong> איך מתלבשים כשהגוף משתנה בכל חודש?</li></ul></div></div>
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">כמה עולה הייעוץ?<span class="faq-icon">+</span></div><div class="faq-a">המחירים משתנים לפי השירות הנבחר. שיחת ההיכרות הראשונה — תמיד בחינם. בשיחה נדבר על מה שמתאים לך מבחינת תהליך ותקציב.</div></div>
+    <div class="faq-row"><div class="faq-q" onclick="toggleFaq(this)">האם הסטיילינג מתאים לכל מידה וגיל?<span class="faq-icon">+</span></div><div class="faq-a">בהחלט. המטרה היא למקסם את הנתונים הטבעיים ולהראות מדהים — תמיד, בלי קשר למידה, משקל או גיל.</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-eyebrow reveal">צרי קשר</div>
+  <h2 class="section-title reveal">מוכנה להתחיל?</h2>
+  <p class="contact-sub reveal">שיחת ההיכרות שלנו (20 דקות, בטלפון או בוואטסאפ) היא לגמרי בחינם וללא שום התחייבות. נדבר על הארון שלך, על מה שתוקע אותך, ואיך אפשר לגרום לבגדים להתחיל לעבוד בשבילך. פשוט תפני ואחזור אליך תוך 24 שעות.</p>
+  <div class="contact-btns reveal">
+    <a href="https://wa.me/972534209740?text=שלום+פלר!+אשמח+לקבוע+שיחת+היכרות" class="c-btn c-wa" target="_blank">💬 וואטסאפ</a>
+    <a href="tel:+972534209740" class="c-btn c-phone">📞 חייגי</a>
+    <a href="mailto:fleur.grabois@gmail.com" class="c-btn c-ig">✉️ מייל</a>
+    
+  </div>
+  <div class="contact-note reveal">20 דקות<span>·</span>ללא התחייבות<span>·</span>בוואטסאפ או בטלפון</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">פלר <em>גרבויס</em></div>
+  <div class="footer-nav"><a href="#about">אודות</a><a href="#services">שירותים</a><a href="#how">תהליך</a><a href="#portfolio">תיק עבודות</a>
+    <a href="#testimonials">המלצות</a><a href="#faq">שאלות</a></div>
+  <div class="footer-copy">© 2026 פלר גרבויס · סטיילינג ומיתוג אישי · חיפה</div>
+</footer>
+
+<script>
+function openModal(id){
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  const m=document.getElementById('modal-'+id);
+  if(m)m.style.display='block';
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeModalOnBg(e){if(e.target===document.getElementById('modal-overlay'))closeModal();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeLB();}});
+
+// HAMBURGER MENU
+function closeMobileMenu(){
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('hamburger').addEventListener('click',function(){
+  const open = this.classList.toggle('open');
+  document.getElementById('mobile-menu').classList.toggle('open',open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+// PORTFOLIO CAROUSEL
+(function(){
+  const track = document.getElementById('port-track');
+  if(!track) return;
+  const cards = Array.from(track.children);
+  let perView = window.innerWidth <= 480 ? 2 : window.innerWidth <= 860 ? 2 : 4;
+  let cur = 0;
+  const total = cards.length;
+
+  function getPerView(){ return window.innerWidth <= 480 ? 2 : window.innerWidth <= 860 ? 2 : 4; }
+
+  function goPort(dir){
+    perView = getPerView();
+    const maxPage = Math.ceil(total/perView)-1;
+    cur = Math.max(0, Math.min(cur+dir, maxPage));
+    const cardW = cards[0].offsetWidth + 12;
+    track.style.transform = 'translateX('+(cur*perView*cardW)+'px)';
+  }
+
+  document.getElementById('port-next').addEventListener('click',()=>goPort(1));
+  document.getElementById('port-prev').addEventListener('click',()=>goPort(-1));
+
+  // auto-advance every 3s
+  let portTimer = setInterval(()=>{
+    perView = getPerView();
+    const maxPage = Math.ceil(total/perView)-1;
+    if(cur >= maxPage) cur=-1;
+    goPort(1);
+  },3000);
+  track.closest('.port-carousel-wrap').addEventListener('mouseenter',()=>clearInterval(portTimer));
+  track.closest('.port-carousel-wrap').addEventListener('mouseleave',()=>{
+    clearInterval(portTimer);
+    portTimer=setInterval(()=>{
+      perView=getPerView();
+      const maxPage=Math.ceil(total/perView)-1;
+      if(cur>=maxPage)cur=-1;
+      goPort(1);
+    },3000);
+  });
+
+  window.addEventListener('resize',()=>{ cur=0; track.style.transform='translateX(0)'; });
+})();
+function toggleFaq(el){
+  const row=el.closest('.faq-row');
+  const isOpen=row.classList.contains('open');
+  document.querySelectorAll('.faq-row.open').forEach(r=>r.classList.remove('open'));
+  if(!isOpen)row.classList.add('open');
+}
+// ── CAROUSEL ──
+(function(){
+  const track = document.getElementById('carousel-track');
+  const dotsWrap = document.getElementById('carousel-dots');
+  const cards = Array.from(track.children);
+  let perView = window.innerWidth <= 560 ? 1 : window.innerWidth <= 860 ? 2 : 3;
+  let current = 0;
+  const total = cards.length;
+  const pages = Math.ceil(total / perView);
+
+  // build dots
+  function buildDots(){
+    dotsWrap.innerHTML='';
+    for(let i=0;i<pages;i++){
+      const d=document.createElement('button');
+      d.className='carousel-dot'+(i===0?' active':'');
+      d.setAttribute('aria-label','עמוד '+(i+1));
+      d.addEventListener('click',()=>goTo(i));
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function goTo(page){
+    current = Math.max(0, Math.min(page, pages-1));
+    const cardWidth = cards[0].offsetWidth + 20; // gap
+    track.style.transform = 'translateX('+(current * perView * cardWidth * -1)+'px)';
+    // RTL: positive translate
+    track.style.transform = 'translateX('+(current * perView * cardWidth)+'px)';
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===current));
+  }
+
+  // RTL carousel — translate positive direction
+  function updateTranslate(){
+    perView = window.innerWidth <= 560 ? 1 : window.innerWidth <= 860 ? 2 : 3;
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.style.transform = 'translateX('+(current * perView * cardWidth)+'px)';
+  }
+
+  document.getElementById('carousel-next').addEventListener('click',()=>goTo(current===pages-1?0:current+1));
+  document.getElementById('carousel-prev').addEventListener('click',()=>goTo(current===0?pages-1:current-1));
+
+  // auto-play
+  let timer = setInterval(()=>goTo(current===pages-1?0:current+1), 5000);
+  track.closest('.carousel-wrap').addEventListener('mouseenter',()=>clearInterval(timer));
+  track.closest('.carousel-wrap').addEventListener('mouseleave',()=>{
+    clearInterval(timer);
+    timer=setInterval(()=>goTo(current===pages-1?0:current+1),5000);
+  });
+
+  // touch swipe
+  let startX=0;
+  track.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+  track.addEventListener('touchend',e=>{
+    const diff=e.changedTouches[0].clientX-startX;
+    if(Math.abs(diff)>40) goTo(diff>0?current-1:current+1);
+  },{passive:true});
+
+  window.addEventListener('resize',()=>{ buildDots(); updateTranslate(); });
+  buildDots();
+})();
+
+
+var SS = {};
+SS['iggy']  = {imgs:["images/img_015.jpg","images/img_016.jpg","images/img_017.jpg","images/img_018.jpg","images/img_019.jpg","images/img_020.jpg","images/img_021.jpg","images/img_022.jpg","images/img_032.jpg"],  cur:0, timer:null, ms:3000};
+SS['yucca'] = {imgs:["images/img_023.jpg","images/img_024.jpg","images/img_025.jpg","images/img_026.jpg","images/img_027.jpg","images/img_028.jpg","images/img_029.jpg","images/img_030.jpg"], cur:0, timer:null, ms:3500};
+
+function loadSS(id) {
+  var s = SS[id];
+  var img = document.getElementById(id+'-img');
+  if (!img) return;
+  img.src = s.imgs[0];
+  s.timer = setInterval(function(){ gS(id,(s.cur+1)%s.imgs.length); }, s.ms);
+}
+
+function gS(id,n) {
+  var s = SS[id];
+  var img = document.getElementById(id+'-img');
+  var dots = document.querySelectorAll('#'+id+' .dot');
+  img.classList.add('fade');
+  setTimeout(function(){
+    s.cur = n;
+    img.src = s.imgs[n];
+    img.classList.remove('fade');
+    dots.forEach(function(d,i){ d.classList.toggle('active', i===n); });
+  }, 200);
+}
+
+function cS(id,dir) {
+  var s = SS[id];
+  clearInterval(s.timer);
+  gS(id,(s.cur+dir+s.imgs.length)%s.imgs.length);
+  s.timer = setInterval(function(){ gS(id,(s.cur+1)%s.imgs.length); }, s.ms);
+}
+
+function openLB(el) {
+  var img = el.querySelector('img');
+  var nm = el.querySelector('.port-name');
+  document.getElementById('lb-img').src = img.src;
+  document.getElementById('lb-name').textContent = nm ? nm.textContent : '';
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLB() {
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+window.addEventListener('load', function(){
+  loadSS('iggy');
+  loadSS('yucca');
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const secs=document.querySelectorAll('section[id],div[id]');
+const navAs=document.querySelectorAll('nav a[href^="#"]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--red)':'';});
+},{passive:true});
+</script>
+</body>
+</html>
