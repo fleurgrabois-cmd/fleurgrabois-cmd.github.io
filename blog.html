@@ -69,6 +69,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);backdrop-fil
 .post-tags{padding:0 40px 28px;display:flex;flex-wrap:wrap;gap:8px}
 .tag{font-size:.75rem;background:#f8f8f8;border:1px solid #e0e0e0;color:var(--gray-text);padding:4px 12px;border-radius:20px}
 
+/* ABOUT CARD */
+.post-about{display:flex;align-items:flex-start;gap:28px;padding:36px 40px}
+.post-about img{width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.post-about .post-header{padding:0;flex:1}
+@media(max-width:600px){
+  .post-about{flex-direction:column;align-items:center;text-align:center;padding:32px 20px}
+  .post-about img{width:100px;height:100px}
+}
+
 /* DIVIDER */
 .section-divider{border:none;border-top:1px solid #eee;margin:8px 0 24px}
 
@@ -94,14 +103,14 @@ footer a{color:var(--red);text-decoration:none}
 
 <nav>
   <div class="nav-inner">
-    <a href="/index.html" class="nav-brand">פלר <em>גרבויס</em></a>
+    <a href="index.html" class="nav-brand">פלר <em>גרבויס</em></a>
     <nav aria-label="ניווט">
       <ul class="nav-links">
-        <li><a href="/index.html#services">שירותים</a></li>
-        <li><a href="/index.html#contact">צור קשר</a></li>
+        <li><a href="index.html#services">שירותים</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
       </ul>
     </nav>
-    <a href="/index.html" class="nav-back">← חזרה לאתר</a>
+    <a href="index.html" class="nav-back">← חזרה לאתר</a>
   </div>
 </nav>
 
@@ -115,18 +124,19 @@ footer a{color:var(--red);text-decoration:none}
 
   <!-- POST 1 -->
   <article class="post">
-    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4azTicsS6XHqYv4692lHxvM6aLIRuDy8q21k6ftROs0oXnEDAWRi1AWGw03w5prUVtICKLSuKXqlegfzPa6WaXdDkk8qoBbLaopJwxmaX-f1Q0ecgPZMHAYUs708ggdjAfmaQ4pyScwA/s1600/fleur.jpg" alt="פלר גרבויס" loading="lazy">
-    <div class="post-header">
-      <div class="post-meta">
-        <span class="post-date">מאי 2014</span>
-        <span class="post-category">על פלר גרבויס</span>
+    <div class="post-about">
+      <img src="fleur-grabois-stylist-portrait.jpg" alt="פלר גרבויס - סטייליסטית אישית" loading="lazy">
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-date">מאי 2014</span>
+          <span class="post-category">על פלר גרבויס</span>
+        </div>
+        <h2>פלר גרבויס — סטייליסטית אישית</h2>
+        <p class="post-excerpt">
+          סטייליסטית אישית מחיפה, שמאמינה שסדר בארון הוא סדר בראש. עברתי מעולם האסטרטגיה והמיתוג לעולם הסטיילינג - ומביאה את שניהם לכל לקוח/ה.
+        </p>
+        <a href="index.html#about" class="read-more">קראו את הסיפור המלא שלי ←</a>
       </div>
-      <h2>פלר גרבויס — סטייליסטית אישית</h2>
-      <p class="post-excerpt">
-        פלר גרבויס היא סטייליסטית אישית המתמחה בסטיילינג ומיתוג אישי לנשים וגברים. לאחר שנים של עבודה בתחום האופנה, פלר פיתחה שיטה ייחודית לפיצוח המלתחה האישית — תהליך שמשלב הבנת מבנה הגוף, ניתוח אישיות, זיהוי הצרכים הספציפיים של כל לקוח ובניית ארון שעובד.
-        <br><br>
-        פלר מלווה לקוחות בתהליכי ארגון מלתחה, שופינג אישי, מהפכי סטיילינג ומציאת הסגנון האמיתי שלהם — כזה שמחמיא, מרגיש נכון ומשדר את מי שהם באמת.
-      </p>
     </div>
     <div class="post-tags">
       <span class="tag">סטיילינג אישי</span>
@@ -138,17 +148,17 @@ footer a{color:var(--red);text-decoration:none}
 
   <!-- POST 2 -->
   <article class="post">
-    <img class="post-img" src="images/blog/mens-tailored-blazer-style-personal-styling.jpg" alt="גבר לבוש בג'קט מחויט - דוגמה לסטיילינג אישי לגברים" loading="lazy">
+    <img class="post-img" src="mens-tailored-blazer-style-personal-styling.jpg" alt="גבר לבוש בג'קט מחויט - דוגמה לסטיילינג אישי לגברים" loading="lazy">
     <div class="post-header">
       <div class="post-meta">
         <span class="post-date">יולי 2026</span>
         <span class="post-category">סטיילינג לגברים</span>
       </div>
-      <h2><a href="posts/blazer-jacket-mens-styling.html">למה כל גבר חייב ג'קט מחויט בארון?</a></h2>
+      <h2><a href="blazer-jacket-mens-styling.html">למה כל גבר חייב ג'קט מחויט בארון?</a></h2>
       <p class="post-excerpt">
         עברת את גיל 30 והג'קט היחיד בארון שלך נקנה לרגל החתונה של החבר הכי טוב שלך? עוד לא מאוחר מדי לתקן. איך לבחור, איך לשלב עם ג'ינס וסניקרס, וטיפים מסטייליסטית אישית לגברים בחיפה והצפון.
       </p>
-      <a href="posts/blazer-jacket-mens-styling.html" class="read-more">קראו את הפוסט המלא ←</a>
+      <a href="blazer-jacket-mens-styling.html" class="read-more">קראו את הפוסט המלא ←</a>
     </div>
     <div class="post-tags">
       <span class="tag">סטיילינג אישי לגבר</span>
@@ -657,13 +667,13 @@ footer a{color:var(--red);text-decoration:none}
   <div class="cta-box">
     <h3>מוכנים לשינוי האמיתי?</h3>
     <p>פגישת היכרות עם פלר גרבויס — נדבר על מה שמציק לכם במלתחה, מה אתם רוצים להשיג, ואיך נגיע לשם ביחד.</p>
-    <a href="/index.html#contact" class="cta-btn">לתיאום פגישה</a>
+    <a href="index.html#contact" class="cta-btn">לתיאום פגישה</a>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2024 פלר גרבויס — סטייליסטית אישית | <a href="/index.html">חזרה לאתר הראשי</a> | <a href="mailto:fleur.grabois@gmail.com">fleur.grabois@gmail.com</a></p>
+  <p>© 2024 פלר גרבויס — סטייליסטית אישית | <a href="index.html">חזרה לאתר הראשי</a> | <a href="mailto:fleur.grabois@gmail.com">fleur.grabois@gmail.com</a></p>
 </footer>
 
 </body>
