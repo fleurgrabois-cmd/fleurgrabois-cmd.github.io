@@ -69,6 +69,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);backdrop-fil
 .post-tags{padding:0 40px 28px;display:flex;flex-wrap:wrap;gap:8px}
 .tag{font-size:.75rem;background:#f8f8f8;border:1px solid #e0e0e0;color:var(--gray-text);padding:4px 12px;border-radius:20px}
 
+/* ABOUT CARD */
+.post-about{display:flex;align-items:flex-start;gap:28px;padding:36px 40px}
+.post-about img{width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.post-about .post-header{padding:0;flex:1}
+@media(max-width:600px){
+  .post-about{flex-direction:column;align-items:center;text-align:center;padding:32px 20px}
+  .post-about img{width:100px;height:100px}
+}
+
 /* DIVIDER */
 .section-divider{border:none;border-top:1px solid #eee;margin:8px 0 24px}
 
@@ -115,18 +124,19 @@ footer a{color:var(--red);text-decoration:none}
 
   <!-- POST 1 -->
   <article class="post">
-    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4azTicsS6XHqYv4692lHxvM6aLIRuDy8q21k6ftROs0oXnEDAWRi1AWGw03w5prUVtICKLSuKXqlegfzPa6WaXdDkk8qoBbLaopJwxmaX-f1Q0ecgPZMHAYUs708ggdjAfmaQ4pyScwA/s1600/fleur.jpg" alt="פלר גרבויס" loading="lazy">
-    <div class="post-header">
-      <div class="post-meta">
-        <span class="post-date">מאי 2014</span>
-        <span class="post-category">על פלר גרבויס</span>
+    <div class="post-about">
+      <img src="images/fleur-grabois-stylist-portrait.jpg" alt="פלר גרבויס - סטייליסטית אישית" loading="lazy">
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-date">מאי 2014</span>
+          <span class="post-category">על פלר גרבויס</span>
+        </div>
+        <h2>פלר גרבויס — סטייליסטית אישית</h2>
+        <p class="post-excerpt">
+          סטייליסטית אישית מחיפה, שמאמינה שסדר בארון הוא סדר בראש. עברתי מעולם האסטרטגיה והמיתוג לעולם הסטיילינג - ומביאה את שניהם לכל לקוח/ה.
+        </p>
+        <a href="/index.html#about" class="read-more">קראו את הסיפור המלא שלי ←</a>
       </div>
-      <h2>פלר גרבויס — סטייליסטית אישית</h2>
-      <p class="post-excerpt">
-        פלר גרבויס היא סטייליסטית אישית המתמחה בסטיילינג ומיתוג אישי לנשים וגברים. לאחר שנים של עבודה בתחום האופנה, פלר פיתחה שיטה ייחודית לפיצוח המלתחה האישית — תהליך שמשלב הבנת מבנה הגוף, ניתוח אישיות, זיהוי הצרכים הספציפיים של כל לקוח ובניית ארון שעובד.
-        <br><br>
-        פלר מלווה לקוחות בתהליכי ארגון מלתחה, שופינג אישי, מהפכי סטיילינג ומציאת הסגנון האמיתי שלהם — כזה שמחמיא, מרגיש נכון ומשדר את מי שהם באמת.
-      </p>
     </div>
     <div class="post-tags">
       <span class="tag">סטיילינג אישי</span>
@@ -138,33 +148,24 @@ footer a{color:var(--red);text-decoration:none}
 
   <!-- POST 2 -->
   <article class="post">
-    <img class="post-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHsNkabgBXWa8gsQkQL-Uut0OXYIUWdGoPkEaufhdtO_FxdyOab01HYWuuwVvoXqOxpIs8ZgtOErkPCu40Cy21LQJw5CG1rx_Wn9FpEUy_qnXCnGTnK6fFY609Fuo9r8_JJqStrDFpL0k/s1600/629ce9755ec5aa670f62b05527d63ef2.jpg" alt="ג'קט מחויט" loading="lazy">
+    <img class="post-img" src="images/blog/mens-tailored-blazer-style-personal-styling.jpg" alt="גבר לבוש בג'קט מחויט - דוגמה לסטיילינג אישי לגברים" loading="lazy">
     <div class="post-header">
       <div class="post-meta">
-        <span class="post-date">מרץ 2014</span>
+        <span class="post-date">יולי 2026</span>
         <span class="post-category">סטיילינג לגברים</span>
       </div>
-      <h2>למה ג'קט מחויט הוא ההשקעה הטובה ביותר שגבר יכול לעשות</h2>
+      <h2><a href="posts/blazer-jacket-mens-styling.html">למה כל גבר חייב ג'קט מחויט בארון?</a></h2>
       <p class="post-excerpt">
-        <strong>ג'קט מחויט. בלייזר. סאקו.</strong> כל שמות הקוד שמעוררים בגבר הישראלי הממוצע תגובה אחת — "זה לא בשבילי". ובכן — טעות. ועוד איך. הגזרה המרובעת של הבלייזר היא פשוט ההמצאה הגדולה ביותר לטובת הגבר מאז ומתמיד.
+        עברת את גיל 30 והג'קט היחיד בארון שלך נקנה לרגל החתונה של החבר הכי טוב שלך? עוד לא מאוחר מדי לתקן. איך לבחור, איך לשלב עם ג'ינס וסניקרס, וטיפים מסטייליסטית אישית לגברים בחיפה והצפון.
       </p>
-    </div>
-    <div class="post-body">
-      <p>
-        הג'קט המחויט בונה לכם פלג גוף עליון, מוצק ומחוטב. הוא יוצר כתפיים, מגדיר מותן ומעניק נוכחות שאי אפשר להשיג עם טי שירט ומכנס ג'ינס — לא משנה כמה הם יוקרתיים.
-      </p>
-      <p>
-        <strong>גברים שלובשים ג'קט:</strong> נראים גבוהים יותר. נראים רזים יותר. נראים מצליחנים יותר. ויותר מכל — הם מרגישים אחרת. הלבוש המחויט פועל מבפנים החוצה. כשאתה מתלבש כמו מישהו שמכבד את עצמו — גם הסביבה מכבדת אותך בהתאם.
-      </p>
-      <p>
-        <strong>כמה טיפים לבחירת בלייזר נכון:</strong> בדקו שהכתף יושבת בדיוק על הכתף שלכם — לא מאחור ולא לפנים. השרוול אמור להראות חצי ס"מ של שרוול חולצה מתחתיו. הגוף לא אמור להיות גדול מידי — זו הטעות הנפוצה ביותר. בלייזר שיושב כמו שצריך מייצר קסם. בלייזר גדול מידי — עושה הפוך.
-      </p>
+      <a href="posts/blazer-jacket-mens-styling.html" class="read-more">קראו את הפוסט המלא ←</a>
     </div>
     <div class="post-tags">
-      <span class="tag">סטיילינג לגברים</span>
-      <span class="tag">ג'קט מחויט</span>
-      <span class="tag">איך להראות טוב</span>
-      <span class="tag">בלייזר</span>
+      <span class="tag">סטיילינג אישי לגבר</span>
+      <span class="tag">סטיילינג גברים</span>
+      <span class="tag">סטייליסטית אישית</span>
+      <span class="tag">סטייליסטית אישית גברים</span>
+      <span class="tag">סטייליסטית לגברים</span>
     </div>
   </article>
 
